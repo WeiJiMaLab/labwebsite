@@ -6,8 +6,7 @@ export default function Menu() {
   var menuitems = [
     <Link href="/#about">About</Link>,
     <Link href="/#research">Research</Link>,
-    <Link href="/#experience">Experience</Link>,
-    <Link href="/#education">Education</Link>,
+    <Link href="/people">People</Link>,
     <Link href="/publications">Publications</Link>,
     <Link href="/#contact">Contact</Link>,
   ];

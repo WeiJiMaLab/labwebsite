@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function LinkButton({ text, href }) {
     return (
-        <span style={{ marginRight: "10px" }}>
+        <div style={{ margin: "10px 6px 5px 0px", display: "inline-block", whiteSpace: "nowrap" }}>
             <Link className="button" href={href} target="_blank">
                 {text}
                 <Image
@@ -13,7 +13,7 @@ function LinkButton({ text, href }) {
                     height={15}
                 />
             </Link>
-        </span>
+        </div>
     );
 }
 

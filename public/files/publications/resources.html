@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="">
+  <meta name="author" content="Ma Lab">
+
+  <title>Ma Lab @ CNS NYU</title>
+
+  <!-- Libraries -->
+
+  <script src="static/libs/jquery-1.11.2.min.js"></script>
+  <script src="static/libs/underscore-min.js"></script>
+  <script src="static/libs/bootstrap.min.js"></script>
+  <script src="static/libs/backbone-min.js"></script>
+  <script src="static/libs/d3.min.js"></script>
+
+  <!-- Custom CSS -->
+
+  <link href = "static/styles/bootstrap.min.css" rel ="stylesheet">
+  <link href = "static/styles/stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row p-header">
+      <nav class='navbar navbar-default site-nav'>
+        <div class='containter-fluid'>
+          <div class='col-md-12'>
+            <div class='row'>
+              <div class="col-sm-12">
+                <img style='max-height:120px; margin-top:-70px;' class="hidden-sm hidden-xs"
+                src="./static/images/seal.png" id="lab-seal">
+                <div style="display:inline-block; max-width: 600px;">
+
+                  <h2 style="display:inline-block; margin-left:10px; margin-top: 25px;">Wei Ji Ma lab</h2>
+                  <h3 style="display:inline-block; margin-left:10px; margin-top: 0px;"><I>The computational study of decision-making</I></h3>
+
+                  <p style="display:inline-block; margin-left:10px">
+                    <a href="http://www.cns.nyu.edu/">Center for Neural Science</a> and
+                    <a href="http://www.psych.nyu.edu/psychology.html">Department of Psychology</a> at New York University 
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class="col-sm-8">
+                <ul class="row nav site-nav">
+                  <li role="presentation" class='col-sm-3'><a href="./index.html">Home</a></li>
+                  <li role="presentation" class='col-sm-3'><a href="./people.html">People</a></li>
+                  <li role="presentation" class='col-sm-3'><a href="./projects.html">Research</a></li>
+                  <li role="presentation" class='col-sm-3'><a href="./publications.html">Publications</a></li>
+                  <li role="presentation" class='active col-sm-3'><a href="./resources.html">Resources</a></li>
+                  <li role="presentation" class='col-sm-3'><a href="./courses.html">Teaching</a></li>
+                  <li role="presentation" class='col-sm-3'><a href="./lablife.html">Lab life</a></li> 
+                  <li role="presentation" class='col-sm-3'><a href="./community.html">Community</a></li>               
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+     <div class='row'>
+      <div class='col-md-12'>
+        <P>
+        <a href=https://github.com/WeijiMaLab> Ma Lab Code Archive of all published works</a>
+        </P>
+      </div>
+
+      <div class='col-md-12'>
+        <P>
+        <a href=https://www.youtube.com/channel/UCRRkHqeEViHxRocVdj9yFgA> Ma Lab YouTube Channel</a>
+        </P>
+      </div>
+  
+
+      <BR>
+
+         <!--<div class='row' id='DE'>-->
+      <h2 class='col-xs-12'>Bayesian Adaptive Direct Search (BADS)</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      <div class='col-md-6'>BADS is a fast hybrid Bayesian optimization algorithm designed to solve difficult optimization problems, in particular related to fitting computational models (e.g., via maximum likelihood estimation).
+
+        BADS has been intensively tested for fitting a variety of computational models, and is currently being used in many computational labs around the world (see <a href=' https://scholar.google.co.uk/scholar?cites=7209174494000095753&as_sdt=2005&sciodt=0,5&hl=en'>Google Scholar</a> for many example applications).
+        
+        In our benchmark with real model-fitting problems, BADS performed on par or better than many other common and state-of-the-art optimizers, as shown in the original BADS paper <a href='./static/files/publications/2017_Acerbi_Ma.pdf'>(Acerbi and Ma, 2017)</a>.
+        
+        BADS requires no specific tuning and runs off-the-shelf similarly to other Python optimizers, such as those in scipy.optimize.minimize.</p>
+
+       
+      </div>
+
+      <div class='col-md-6'>
+        <div class='row'>
+          <div class='col-md-3'>GitHub</div>
+          <div class='col-md-9'><a href='https://github.com/acerbilab/pybads'>Python version</a></div>
+         
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>GitHub</div>
+          <div class='col-md-9'><a href='https://github.com/acerbilab/bads'>MatLab version</a></div>
+
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Documentation</div>
+          <div class='col-md-9'><a href='https://acerbilab.github.io/pybads/'>Link</a></div>
+
+        </div>
+
+      
+        <div class='row'>
+          <div class='col-md-3'>Source paper</div>
+          <div class='col-md-9'><a href='./static/files/publications/2017_Acerbi_Ma.pdf'>Acerbi Ma 2017</a></div>
+
+        </div>
+
+
+        <br>
+     
+
+        <div class='row'>
+          <div class='col-md-3'>Contact</div>
+          <div class='col-md-9'><a href='mailto:luigi.acerbi@nyu.edu'>Luigi Acerbi</a></div>
+        </div>
+
+      
+        <br>
+
+
+
+      </div>
+
+
+       <!--<div class='row' id='DE'>-->
+        <h2 class='col-xs-12'>Variational Bayesian Monte Carlo (VBMC)</h2>
+        <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+        <div class='col-md-6'>VBMC is an approximate Bayesian inference method designed to fit computational models with a limited budget of potentially noisy likelihood evaluations, useful for computationally expensive models or for quick inference and model evaluation (Acerbi,<a href='./static/files/publications/2018_Acerbi.pdf'>2018</a>; <a href='./static/files/publications/2020_Acerbi.pdf'>2020</a>).</p>
+  
+        
+        </div>
+  
+        <div class='col-md-6'>
+          <div class='row'>
+            <div class='col-md-3'>GitHub</div>
+            <div class='col-md-9'><a href='https://github.com/acerbilab/pyvbmc'>Python version</a></div>
+           
+          </div>
+          <div class='row'>
+            <div class='col-md-3'>GitHub</div>
+            <div class='col-md-9'><a href='https://github.com/acerbilab/vbmc'>MatLab version</a></div>
+  
+          </div>
+          <div class='row'>
+            <div class='col-md-3'>Documentation</div>
+            <div class='col-md-9'><a href='https://acerbilab.github.io/pyvbmc/'>Link</a></div>
+  
+          </div>
+  
+          
+  
+          <div class='row'>
+            <div class='col-md-3'>Source paper</div>
+            <div class='col-md-9'><a href='./static/files/publications/2018_Acerbi.pdf'>Acerbi 2018</a></div><br>
+            <div class='col-md-9'><a href='./static/files/publications/2020_Acerbi.pdf'>Acerbi 2020</a></div>
+  
+          </div>
+  
+  
+  
+          
+  
+          <br>
+       
+  
+          <div class='row'>
+            <div class='col-md-3'>Contact</div>
+            <div class='col-md-9'><a href='mailto:luigi.acerbi@nyu.edu'>Luigi Acerbi</a></div>
+          </div>
+  
+        
+          <br>
+  
+  
+       
+  
+  
+        </div>
+
+      <h2 class='col-xs-12'>Tutorial in Bayesian statistics</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      
+      <div class='col-md-6'>
+        Bayesian Statistics Part 1: Basics and Bayes factors<BR>
+        Presenter: Ronald van den Berg<BR>
+        <a href='https://www.youtube.com/watch?v=sNnNW8QOEbE&t=4s'>Video</a> | <a href='./static/files/tutorial/bayesian_tutorial_20200617.pdf'>Slides</a> 
+      </div>
+      <div class='col-md-6'>
+        Part 1 reviewed frequentist hypothesis testing (based on p values) and contrasted this approach with Bayesian hypothesis testing (using Bayes factors). Basic concepts of Bayesian statistics were reviewed (posteriors, priors, etc) and several standard hypothesis tests were discussed from both the frequentist and Bayesian perspective, including correlation, t-test, and ANOVA.<BR>
+        Prerequisites: basic probability theory, basic frequentist statistics <BR>
+        ------------------------------------------------------------------------------------------- <BR>
+      </div> 
+      <BR/><BR/><BR/><BR/>
+      <div class='col-md-6'>
+        Bayesian Statistics Part 2: Parameter estimation and practice<BR>
+        Presenter: Gianni Galbiati<BR>
+        <a href='https://www.youtube.com/watch?v=mS-3MQvdQOY&list=PLmX7T5IuDU4e2bKeemAVvFdqSPADKu8pJ&index=3&t=3s'>Video</a> | <a href='./static/files/tutorial/bayesian_tutorial_20200624.pdf'>Slides</a> | <a href='https://docs.google.com/presentation/d/1OMLTBOSkeJB4pd9BgAl6rQYLNYvQydlzHwwTZgi5MUk/edit#slide=id.p'>Slides (with notes)</a><br>
+        <a href=' https://colab.research.google.com/drive/1UzlnsH_RJiBSu3nMngLH4MwGii_WKMgC?usp=sharing'>Code example (presidential heights)</a> | <a href='https://colab.research.google.com/drive/1dibSGcrZZXdawXU9q_jFwudM1FRUAPsw?usp=sharing'>Code example (Aspen’s change detection task)</a><br>
+      </div>
+      <div class='col-md-6'>
+        Part 2 covered Bayesian parameter estimation with a practical emphasis. The first section briefly covered parameter estimation as a statistical paradigm for scientific inference and software options for doing it in Python. The second section was a hands-on tutorial using PyMC3 to complete analyses in worksheets.<BR>
+        Prerequisites: basic probability theory, basic frequentist statistics <BR>
+      </div>   
+      <BR/><BR/><BR/>
+      
+      <h2 class='col-md-12' style='margin-top:0px'>Four-in-a-row</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      <div class='col-md-6'>
+        <p>In the paper <a href="https://www.cns.nyu.edu/malab/static/files/publications/2017%20Van%20Opheusden%20Galbiati%20Bnaya%20Li%20Ma.pdf"><I>A computational model of decision tree search</I></a> (2017), we conducted a set of experiments on the game four-in-a-row, played on a 4-by-9 board. We also introduced a computational model of human moves. Here, you can try out the experiments and explore the data.</p>
+      </div>
+      <div class='col-md-6'>
+
+        <div class='row'>
+          <div class='col-md-9'>
+          <a href="https://basvanopheusden.github.io/templates/try_experiments.html">
+          
+            <img src="./static/images/4-in-a-row.jpg"  width="600">
+          </a>
+          </div>
+        </div>  
+        
+      </div>
+      
+
+
+      <h2 class='col-md-12' style='margin-top:0px'>Variable-precision (VP) models</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      <div class='col-md-6'>
+        <p>The variable-precision model is currently (2016) the best available model of set size effects in visual working memory. In this model, the observer has a noisy representation of all items in a memory array. The precision of this representation is itself modeled as a random variable - possibly reflecting fluctuations in attention. Mean precision decreases monotonically with set size. The VP model consistently outperforms the fixed-capacity, item-limit model by Pashler 1988 and Cowan 2001, and more recent variants. Here, we provide simple, stand-alone Matlab scripts to analyze data from two common paradigms: delayed estimation and change detection. In its basic form, the model has three parameters (for change detection) and four (for delayed estimation). Note that the VP model here (with a gamma distribution on precision) is slightly different from the one implemented in MemToolbox. Email us if you have any questions.</p>
+      </div>
+      <div class='col-md-6'>
+        <div class='row'>
+          <div class='col-md-12'><b>Variable-precision-model on delayed-estimation data</b>      
+          </div>
+        </div>
+
+       <div class='row'>
+          <div class='col-xs-6'>Most basic variable-precision model (use this if you are just starting)</div>
+          <div class='col-xs-6'><a href='./static/files/dataAndCode/VPA_code.zip'>Zip file (8 KB)</a></div>
+        </div>
+
+
+        <div class='row'>
+          <div class='col-md-6'>Complete package (many variants)</div>
+          <div class='col-md-6'><a href='https://github.com/NYUMaLab/delayed_estimation_benchmark'>Github</a></div>
+        </div>
+
+
+
+
+        <div class='row'>
+          <div class='col-xs-6'>Code authors</div>
+          <div class='col-xs-6'><a href='mailto:nronaldvdberg@gmail.com'>Ronald van den Berg</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-xs-6'>Source paper</div>
+          <div class='col-xs-6'><a href='./static/files/publications/2012 Van den Berg Shin Ma PNAS.pdf'>Van den Berg, Shin, George, Chou, and Ma 2012</a></div>
+        </div>
+        <br>
+        <div class='row'>
+          <div class='col-md-12'><b>VP on change detection data with controlled magnitude change</b></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>GitHub</div>
+          <div class='col-md-9'><a href='https://github.com/NYUMaLab/change_detection'>Link</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>To download</div>
+          <div class='col-md-9'>
+            <a href='./static/files/dataAndCode/Set_Size_Files.zip'>All data and code (664 MB)</a><BR>
+            <a href='./static/files/dataAndCode/Set_Size_Files_Light.zip'>Light (9.2 MB)</a> - large .mat files containing analysis output left out; however, they can be generated using the provided code
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Code authors</div>
+          <div class='col-md-9'><a href='mailto:shaiyan@mit.edu'>Shaiyan Keshvari</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Source papers</div>
+          <div class='col-md-9'>
+            <a href='./static/files/publications/2012 Keshvari Ma.pdf'>Keshvari, Van den Berg, and Ma 2012</a><br>
+            <a href='./static/files/publications/2013 Keshvari Ma.pdf'>Keshvari, Van den Berg, and Ma 2013</a>
+          </div>
+        </div>
+        <br>
+        <div class='row'>
+          <div class='col-md-12'><b>VP on change detection data with uncontrolled magnitude change</b></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>GitHub</div>
+          <div class='col-md-9'><a href='https://github.com/NYUMaLab/VP-on-change-detection-data-with-uncontrolled-magnitude-change'>Link</a></div>
+        </div>
+        <div class='row'>
+
+          <div class='col-md-3'>To download</div>
+          <div class='col-md-9'><a href='./static/files/dataAndCode/CDsimple_for_website.zip'>Code</a></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Code authors</div>
+          <div class='col-md-9'><a href='mailto:weijima@nyu.edu'>Wei Ji Ma</a></div>
+        </div>
+      </div>
+
+    
+      <!--<div class='row' id='DE'>-->
+      <h2 class='col-xs-12'>Delayed-estimation benchmark data and factorial model comparison</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      <div class='col-md-6'>
+        <p>Delayed estimation is a psychophysical paradigm developed in 2004 by Patrick Wilken and Wei Ji Ma, that is used to probe the contents of working memory. Observers remember one or multiple items and after a delay, report on a continuous scale the feature value of a stimulus at one probed location. This benchmark data set contains data from 10 experiments and 6 laboratories. Additional data sets are welcome. Email us if you have any to add. Below, we also provide complete code to analyze the data.</p>
+
+                <div class='row'>
+          <div class='col-md-12'>Source paper for delayed-estimation paradigm: <a href='./static/files/publications/2004 Wilken Ma.pdf'>Wilken and Ma 2004</a></div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='row'>
+          <div class='col-md-3'>GitHub</div>
+          <div class='col-md-9'><a href='https://github.com/NYUMaLab/delayed_estimation_benchmark'>Link</a></div>
+        </div>
+
+        <br>
+        <div class='row'>
+          <div class='col-md-3'>To download</div>
+          <div class='col-md-9'><a href='./static/files/dataAndCode/Van_den_Berg_2014_DATA.zip'>All benchmark data</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Contact</div>
+          <div class='col-md-9'><a href='mailto:nronaldvdberg@gmail.com'>Ronald van den Berg</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Source papers</div>
+          <div class='col-md-9'>
+            <a href='./static/files/publications/2004 Wilken Ma.pdf'>Wilken and Ma 2004</a><br>
+            <a href='http://media.wix.com/ugd//049fb3_99f64b76bc92288d138dc59105b36794.pdf'>Zhang and Luck 2008</a> | <a href='http://www.weiweizhang.org/'>Zhang lab</a> | <a href='http://mindbrain.ucdavis.edu/people/sjluck'>Luck lab</a><br>
+            <a href='http://www.paulbays.com/pdf/BayCatHus09.pdf'>Bays and Husain 2009</a> | <a href='http://www.paulbays.com/'>Bays lab</a> | <a href='http://www.masudhusain.org/husainlab/Home.html'>Husain lab</a><br>
+            <a href='http://www.psy.vanderbilt.edu/tonglab/web/papers/Rademaker_Tong_JoV_2012.pdf'>Rademaker, Tredway, and Tong 2012</a> | <a href='http://www.psy.vanderbilt.edu/tonglab/web/Home.html'>Tong lab</a><br>
+            <a href='./static/files/publications/2012 Van den Berg Shin Ma PNAS.pdf'>Van den Berg, Shin, George, Chou, and Ma 2012</a><br>
+          </div>
+        </div>
+        <br>
+
+
+        <div class='row'>
+          <div class='col-md-3'>To download</div>
+          <div class='col-md-9'><a href='./static/files/dataAndCode/Van_den_Berg_2014_CODE.zip'>Code to analyze the benchmark data</a></div>
+        </div>
+        <div class='row'>
+          <div class='col-md-3'>Code authors</div>
+          <div class='col-md-9'><a href='mailto:nronaldvdberg@gmail.com'>Ronald van den Berg</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Source papers</div>
+          <div class='col-md-9'><a href='./static/files/publications/2014 Van den Berg Ma Psych Review.pdf'>Van den Berg, Awh, and Ma 2014</a></div>
+        </div>
+
+
+      </div>
+      <!--</div>-->
+
+      <!--<div class='row' id='CD'>-->
+      <h2 class='col-xs-12'>Change detection</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      <div class='col-md-6'>
+        <p>Change detection is a classic paradigm developed by W.A. Phillips (1974) and Harold Pashler (1988), to assess the limitations of visual short-term memory. Our lab has made two improvements to this paradigm: first, we vary the magnitude of change on a continuum, so that we can plot entire psychometric curves and thus have more power to compare models. Second, we test new models, especially noise-based (continuous-resource) models, and found that they do better than item-limit (slot) models.</p>
+
+        References on the concepts:
+        <br>
+        <div class='row'>
+          <div class='col-md-12'>Noise-based models of change detection: <a href='./static/files/publications/2004 Wilken Ma.pdf'>Wilken and Ma 2004</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-12'>Change magnitude variation: <a href='./static/files/publications/2012 Keshvari Ma.pdf'>Keshvari, Van den Berg, and Ma 2012</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-12'>Detailed testing of VSTM limitation models: <a href='./static/files/publications/2013 Keshvari Ma.pdf'>Keshvari, Van den Berg, and Ma 2013</a></div>
+        </div>
+
+
+      </div>
+
+      <div class='col-md-6'>
+
+        <div class='row'>
+          <div class='col-md-3'>GitHub</div>
+          <div class='col-md-9'><a href='https://github.com/NYUMaLab/change_detection'>Link</a></div>
+        </div>
+        
+        <div class='row'>
+          <div class='col-md-3'>To download</div>
+          <div class='col-md-9'>
+            <a href='./static/files/dataAndCode/Set_Size_Files.zip'>Full (664 MB)</a><BR>
+            <a href='./static/files/dataAndCode/Set_Size_Files_Light.zip'>Light (9.2 MB)</a> - large .mat files containing analysis output left out; however, they can be generated using the provided code
+          </div>
+        </div>
+
+
+        <div class='row'>
+          <div class='col-md-3'>Code authors</div>
+          <div class='col-md-9'><a href='mailto:shaiyan@mit.edu'>Shaiyan Keshvari</a></div>
+        </div>
+
+        <div class='row'>
+          <div class='col-md-3'>Source papers</div>
+          <div class='col-md-9'>
+            <a href='./static/files/publications/2013 Keshvari Ma.pdf'>Keshvari, Van den Berg, and Ma 2013</a>
+          </div>
+        </div>
+      </div>
+      <!--</div>-->
+
+      <!--<div class='row' id='CD'>-->
+      <h2 class='col-xs-12'>Bayesian microsaccade detection</h2>
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+      
+      <div class='col-md-12'><a href='./static/files/dataAndCode/BMD.zip'>Code</a></div>
+
+      <!--</div>-->
+      <div class="row"><div class="col-md-12"><div class="blank"></div></div></div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

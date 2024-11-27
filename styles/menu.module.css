@@ -4,8 +4,7 @@
   width: 100%;
   height: 70px;
   z-index: 1;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: white;
 }
 
 .menuitem{

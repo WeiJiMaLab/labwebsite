@@ -62,7 +62,7 @@ h4{
 }
 
 p{
-  font-size: 19px;
+  font-size: 14px;
 }
 
 .banner{
@@ -81,6 +81,7 @@ p{
 }
 
 .button{
+  font-size: 14px;
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;

@@ -9,9 +9,7 @@ import Research from '../components/research';
 import Education from '../components/education';
 import Experience from '../components/experience';
 import Contact from '../components/contact';
-
 import utilStyles from '../styles/utils.module.css';
-
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -30,10 +28,10 @@ export default function Home({allPostsData}) {
       </Head>
       <Welcome/>
       <About/>
-      <Research/>
+      {/* <Research/>
       <Experience/>
       <Education/>
-      <Contact/>
+      <Contact/> */}
     </Layout>
   );
 }

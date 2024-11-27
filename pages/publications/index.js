@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import React, { Component } from "react";
 import LinkButton from "../../components/linkbutton";
 import { Button, Row, Col, Input } from "reactstrap";
-import publicationslist from "../publications/publicationslist";
+import publicationslist from "../../data/publications";
 import ReactMarkdown from "react-markdown";
 
 class Publications extends Component {
@@ -13,7 +13,7 @@ class Publications extends Component {
     const publications = publicationslist;
 
     this.filters = [
-      ...new Set(publications.flatMap((publication) => publication.tags))
+      ...new Set(publications.flatMap((publication) => publication.tags)),
     ];
 
     this.rename = {
@@ -42,27 +42,21 @@ class Publications extends Component {
           (filter) => !this.state[filter]
         );
 
-        const matchesFilter = this.filters.some(
-          (filter) => this.state[filter] && publication.tags.includes(filter)
+        const matchesFilter = this.filters.every(
+          (filter) => !this.state[filter] || publication.tags.includes(filter)
         );
-
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = publication.description;
-        const textDescription = tempDiv.textContent || tempDiv.innerText || "";
-        console.log(publication.description)
-        console.log("Got here!")
 
         const matchesSearch =
           publication.title
             .toLowerCase()
             .includes(this.state.searchQuery.toLowerCase()) ||
-          textDescription
+          publication.authors
+            .join(" ")
             .toLowerCase()
             .includes(this.state.searchQuery.toLowerCase()) ||
           publication.tags.some((tag) =>
             tag.toLowerCase().includes(this.state.searchQuery.toLowerCase())
           );
-
         return (allFiltersOff || matchesFilter) && matchesSearch;
       }),
     });
@@ -70,7 +64,17 @@ class Publications extends Component {
 
   filterby(filter) {
     this.setState(
-      (prevState) => ({ [filter]: !prevState[filter] }),
+      (prevState) => {
+      const newState = { [filter]: !prevState[filter] };
+      if (!isNaN(filter)) {
+        this.filters
+        .filter((f) => !isNaN(f) && f !== filter)
+        .forEach((yearFilter) => {
+          newState[yearFilter] = false;
+        });
+      }
+      return newState;
+      },
       this.refresh
     );
   }
@@ -95,7 +99,7 @@ class Publications extends Component {
         key={filter}
         onClick={() => this.filterby(filter)}
         style={{
-          backgroundColor: this.state[filter] ? "pink" : "black",
+          backgroundColor: this.state[filter] ? "blue" : "black",
           margin: "2px",
         }}
       >
@@ -106,117 +110,147 @@ class Publications extends Component {
 
   formatPublication(publication, index) {
     return (
-      <div key={index} className="publication-item" style={{ marginLeft: "150px" }}>
-      <h3>{publication.title}</h3>
-      <p>
-      {publication.authors.join("; ")}, {publication.year}
-      <br />
-      {publication.journal && <em>{publication.journal}</em>}
-      {publication.info ? ", " + publication.info: ""}
-      {publication.doi && (
-        <>
-        , DOI: <a href={`https://doi.org/${publication.doi}`}>{publication.doi}</a>
-        </>
-      )}
-      </p>
-      <div className="publication-links">
-      {publication.links.map((link, linkIndex) => (
-      <LinkButton key={linkIndex} text={link.text} href={link.url} />
-      ))}
-      </div>
-      <div className="publication-description">
-      <ReactMarkdown>{publication.description}</ReactMarkdown>
-      </div>
-      <p className="publication-tags">
-      <b>Tags:</b> {publication.tags.filter((filter) => isNaN(filter)).sort().join(", ")}
-      </p>
-      <hr />
-      </div>
-    );
-  }
-
-  render() {
-    const publicationsByYear = this.state.events.reduce((acc, publication) => {
-      const year = publication.year;
-      if (!acc[year]) {
-      acc[year] = [];
-      }
-      acc[year].push(publication);
-      return acc;
-    }, {});
-
-    return (
-      <Layout>
-      <div className="banner">
-      <h1>
-      <span>Publications</span>
-      </h1>
-      <Input
-      type="text"
-      placeholder="Search by title, description, or tags"
-      value={this.state.searchQuery}
-      onChange={this.handleSearchChange}
-      style={{ marginBottom: "10px" }}
-      />
-      <div>
-      <Button
-        color="primary"
-        onClick={() => this.setState({ dropdownOpen: !this.state.dropdownOpen })}
-        style={{ marginBottom: "10px" }}
+      <div
+        key={index}
+        className="publication-item"
+        style={{ marginLeft: "150px" }}
       >
-        Filters
-      </Button>
-      {this.state.dropdownOpen && (
-        <div className="filters-dropdown">
-        <div>
-        <strong>Filter by Type:</strong>
-        <br />
-        {this.makebuttons(["dissertation", "preprint", "publication"])}
-        </div>
-        <div>
-        <strong>Filter by Year:</strong>
-        <br />
-        {this.makebuttons(
-        this.filters.filter((filter) => !isNaN(filter)).sort().reverse()
-        )}
-        </div>
-        <div>
-        <strong>Filter by Topic:</strong>
-        <br />
-        {this.makebuttons(
-        this.filters.filter((filter) => isNaN(filter)).sort()
-        )}
-        </div>
-        <br />
-        <Button onClick={this.reset}>Reset Filters</Button>
-        </div>
-      )}
-      </div>
-      <div className="publications-list">
-      {Object.keys(publicationsByYear)
-        .sort((a, b) => b - a)
-        .map((year, index) => (
-        <div key={year} className="year-section">
-        <h2 className="sticky-year">{year}</h2>
-        <hr style={{ height: 3 }} />
-        {publicationsByYear[year].map(this.formatPublication)}
-        </div>
+        <h3>{publication.title}</h3>
+        <p style={{ margin: "0" }}>
+          {publication.authors.join(", ")}, {publication.year}
+          <br />
+          {publication.journal && <em>{publication.journal}</em>}
+          {publication.info ? ", " + publication.info : ""}
+          {publication.doi && (
+            <>
+              , DOI:{" "}
+              <a href={`https://doi.org/${publication.doi}`}>
+                {publication.doi}
+              </a>
+            </>
+          )}
+        </p>
+        {publication.links.map((link, linkIndex) => (
+          <LinkButton key={linkIndex} text={link.text} href={link.url} />
         ))}
+        <div className="publication-description">
+          <ReactMarkdown>{publication.description}</ReactMarkdown>
+        </div>
+        <p className="publication-tags">
+          <b>Tags:</b>{" "}
+          {publication.tags
+            .filter((filter) => isNaN(filter))
+            .sort()
+            .join(", ")}
+        </p>
+        <hr />
       </div>
-      </div>
-      <style jsx>{`
-      .sticky-year {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 60px; /* Adjust this value based on the height of your menu */
-      background: none;
-      z-index: 1;
-      padding-top: 10px;
-      }
-      `}</style>
-      </Layout>
     );
   }
-}
+
+    renderDropdownToggle(label, stateKey, filters) {
+      return (
+        <div>
+          <span
+            className="filter-toggle"
+            onClick={() =>
+              this.setState({ [stateKey]: !this.state[stateKey] })
+            }
+            style={{
+              cursor: "pointer",
+              marginBottom: "10px",
+              display: "inline-block",
+            }}
+          >
+            <span
+              style={{
+                display: "inline-block",
+                transform: this.state[stateKey]
+                  ? "rotate(90deg)"
+                  : "rotate(0deg)",
+                transition: "transform 0.3s",
+              }}
+            >
+              ▶
+            </span>
+            {" "} {label}
+          </span>
+          {this.state[stateKey] && (
+            <div className="filters-dropdown">
+              {this.makebuttons(filters)}
+            </div>
+          )}
+        </div>
+      );
+    }
+  
+    render() {
+      const publicationsByYear = this.state.events.reduce((acc, publication) => {
+        const year = publication.year;
+        if (!acc[year]) {
+          acc[year] = [];
+        }
+        acc[year].push(publication);
+        return acc;
+      }, {});
+
+      return (
+        <Layout>
+          <div className="banner">
+            <h1>
+              <span>Publications</span>
+            </h1>
+            <Input
+              type="text"
+              placeholder="Search by title, authors, or tags"
+              value={this.state.searchQuery}
+              onChange={this.handleSearchChange}
+              style={{ marginBottom: "10px" }}
+            />
+            <div>
+              {this.renderDropdownToggle("Filter by Type", "typeDropdownOpen", [
+                "dissertation",
+                "preprint",
+                "publication",
+              ])}
+              {this.renderDropdownToggle(
+                "Filter by Year",
+                "yearDropdownOpen",
+                this.filters.filter((filter) => !isNaN(filter)).sort().reverse()
+              )}
+              {this.renderDropdownToggle(
+                "Filter by Topic",
+                "topicDropdownOpen",
+                this.filters.filter((filter) => isNaN(filter)).sort()
+              )}
+              <br />
+              <Button onClick={this.reset}>Reset Filters</Button>
+            </div>
+            <div className="publications-list">
+              {Object.keys(publicationsByYear)
+                .sort((a, b) => b - a)
+                .map((year, index) => (
+                  <div key={year} className="year-section">
+                    <h2 className="sticky-year">{year}</h2>
+                    <hr style={{ height: 3 }} />
+                    {publicationsByYear[year].map(this.formatPublication)}
+                  </div>
+                ))}
+            </div>
+          </div>
+          <style jsx>{`
+            .sticky-year {
+              position: -webkit-sticky;
+              position: sticky;
+              top: 60px; /* Adjust this value based on the height of your menu */
+              background: none;
+              z-index: 1;
+              padding-top: 10px;
+            }
+          `}</style>
+        </Layout>
+      );
+    }
+  }
 
 export default Publications;
