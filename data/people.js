@@ -1,18 +1,39 @@
 //
 // Format for adding a new person to the list:
 // {
-//     firstname: "Jordan",
-//     lastname: "Lei",
-//     image: "//images/Jordan2.jpg",
-//     email: "jordan.lei@nyu.edu",
-//     googleScholar: "https://scholar.google.com/citations?hl=en&user=GRnnNBYAAAAJ",
-//     neurotree: "https://neurotree.org/neurotree/tree.php?pid=894072",
-//     website: "https://www.jordanlei.com/",
-//     github: "https://github.com/jordanlei",
-//     twitter: "https://twitter.com/NeuroLei",
-//     linkedin: "https://www.linkedin.com/in/jordan-lei-782890130/",
-//     bio: "Jordan is a Ph.D. student in Neuroscience who joined the lab in 2022. He is interested in the neural and cognitive mechanisms of complex planning. His current projects involve researching how people adapt their planning to uncertainty in the environment, how monkeys develop strategies in Four-in-a-row, and how people think ahead in chess. In his spare time, he enjoys painting, swimming, visiting museums, cooking, and playing guitar."
-// 
+//     firstname: "Jane",
+//     lastname: "Doe",
+//     image: "//images/janedoe.jpg",
+//     email: "jane.doe@example.com",
+//     googleScholar: "https://scholar.google.com/citations?hl=en&user=example",
+//     neurotree: "https://neurotree.org/neurotree/tree.php?pid=example",
+//     website: "https://www.janedoe.com/",
+//     github: "https://github.com/janedoe",
+//     twitter: "https://twitter.com/janedoe",
+//     linkedin: "https://www.linkedin.com/in/jane-doe/",
+//     bio: "Jane is a Ph.D. student in Neuroscience who joined the lab in 2022. She is interested in the neural and cognitive mechanisms of complex planning. Her current projects involve researching how people adapt their planning to uncertainty in the environment, how monkeys develop strategies in Four-in-a-row, and how people think ahead in chess. In her spare time, she enjoys painting, swimming, visiting museums, cooking, and playing guitar."
+// }
+
+const weiji = [
+    {
+        firstname: "Wei Ji",
+        lastname: "Ma",
+        status: ["pi"],
+        image: "/images/weiji.jpg",
+        email: "weijima@nyu.edu",
+        googleScholar: "https://scholar.google.com/citations?user=2370JKUAAAAJ",
+        neurotree: "http://neurotree.org/neurotree/peopleinfo.php?pid=2887",
+        website: "http://www.weijima.com/",
+        links: [
+            { text: "CV", url: "/files/Wei%20Ji%20Ma%20-%20CV%20202310.pdf" },
+            { text: "Unofficial story (abstract)", url: "http://www.cns.nyu.edu/events/growingupinscience/unofficial.html#WeiJi" },
+            { text: "Unofficial story (video)", url: "https://www.youtube.com/watch?v=hFQeabuyhMo" }
+        ],
+        bio: `**Short Bio:** Wei Ji Ma is Professor of [Neural Science](http://www.cns.nyu.edu) and [Psychology](http://psych.nyu.edu) at New York University. Born and raised in the Netherlands, he received his Ph.D. in Physics from the University of Groningen in 2001, after which he transitioned to computational neuroscience and cognitive science. He was Assistant Professor of Neuroscience at Baylor College of Medicine from 2008 to 2013 before he joined New York University. His laboratory combines behavioral experiments, computational models, and neural measures to investigate how people make decisions under uncertainty. Ma founded the ["Growing up in Science"](http://www.growingupinscience.com) mentorship series, in which scientists tell their life stories with an emphasis on doubts, struggles, and failures. He is also a founding member of the Scientist Action and Advocacy Network, which provides pro-bono science to social and environmental non-profit organizations. He co-founded the [Rural China Education Foundation](http://www.ruralchina.org), which supports community-based curriculum in rural China. In 2021, Ma received the Jeffrey L. Elman Prize for Scientific Achievement and Community Building from the Cognitive Science Society, and in 2024 he received the Award for Education in Neuroscience from the Society for Neuroscience (SfN).\n\n **Long Bio:** Wei Ji Ma is Professor of [Neural Science](http://www.cns.nyu.edu) and [Psychology](http://psych.nyu.edu) at NYU. His lab studies decision-making in perception, attention, working memory, social cognition, and planning, using a combination of human behavioral experiments, computational modeling, and - through collaboration - electrophysiology and neuroimaging.  Wei Ji grew up in the Netherlands and received M.Sc.s in Physics and Mathematics from the University of Groningen. He did his Ph.D. in Physics at the same place, but was mostly supervised by [Erik Verlinde](https://en.wikipedia.org/wiki/Erik_Verlinde) at Utrecht University and Princeton University. He continued as a postdoc in computational neuroscience, first with [Christof Koch](https://alleninstitute.org/what-we-do/brain-science/about/team/staff-profiles/christof-koch/) at Caltech and then with [Alexandre Pouget](https://www.unige.ch/medecine/neuf/en/research/grecherche/alexandre-pouget/) at the University of Rochester. Along the way, he became more interested and involved in experimental psychology and the mathematical modeling of cognition. He was Assistant Professor of Neuroscience at [Baylor College of Medicine](http://www.bcm.edu) from 2008 to 2013, with an affiliate appointment in Psychology at [Rice University](http://www.rice.edu). He has been at NYU since 2013, as full Professor since 2020. He has affiliate appointments in the [Neuroscience Institute](https://med.nyu.edu/neuroscience/), the [Institute for the Study of Decision Making](https://isdm.nyu.edu), the [Center for Data Science](http://cds.nyu.edu), and the [Center for Experimental Social Science](http://cess.nyu.edu). From 2016 to 2021, Wei Ji was Co-Program Director (with [Xiao-Jing Wang](http://www.cns.nyu.edu/corefaculty/Wang.php)) of the NIH-funded [Training Program in Computational Neuroscience](https://as.nyu.edu/cns/UndergraduateProgram/FundingOpportunities/CompTrainingGrant.html) at NYU. Moreover, Wei Ji is active in mentorship, community-building, and outreach. He is a founding member of the [Scientist Action and Advocacy Network](http://scaan.net) (founder: [Will Adler](https://wtadler.com)) and of [NeuWrite NYU](https://www.neuwrite.org/neuwrite-nyu/) (founder: [Alex Berardino](https://www.linkedin.com/in/alexdino)). With [Cristina Alberini](http://www.cns.nyu.edu/corefaculty/Alberini.php), Wei Ji founded the [Growing up in Science seminar series](http://www.growingupinscience.com), in which scientists tell their "unofficial stories". [Read](http://www.cns.nyu.edu/events/growingupinscience/unofficial.html#Wei Ji) or [listen to](https://www.youtube.com/watch?v=hFQeabuyhMo) Wei Ji's own unofficial story.Besides his academic work, Wei Ji is the co-founder (with [Diane Geng](http://www.ruralchina.org/our-team) and [Sara Lam](https://academics.morris.umn.edu/sara-lam)) of the [Rural China Education Foundation](http://www.ruralchina.org). He enjoys strategy games, badminton, [science-art collaborations](https://www.jodyoberfelder.com/thebrainpiece/), immersive theater, and exploring food.\n\n 马伟基是美国纽约大学神经科学和心理学教授，他注重研究人类的感知、记忆及决策。他是一名荷兰华裔，其祖辈在上世纪二十年代从中国烟台移民到荷兰。马伟基于格罗宁根大学先后获得物理学硕士、数学硕士和物理学博士学位。从2002至2008年间，他分别在加州理工学院和罗彻斯特大学从事计算神经学方面的博士后研究工作，并在贝勒医学院开始他的教学生涯(2008-2013)。他长期致力于教育政策、非营利组织管理及科学普及领域的发展，并于2005年成立了乡村教育促进会。`,
+    },
+];
+
+
 
 const labMembers = [
     {
@@ -441,8 +462,6 @@ const collaboratorsExternal = [
         status: ["phd", "collaborator"]
     }
 ];
-
-const collaborators = collaboratorsAlumni.concat(collaboratorsExternal);
 
 const labAlumni = [
     {
@@ -1058,12 +1077,13 @@ const pastcollaborators = [
 
 export const past = labAlumni.concat(mastersStudents, researchAssistants, undergradAlumni, rotationStudents, summerStudents, highschoolstudents, pastcollaborators);
 
-export const peoplelist = labMembers.concat(collaborators, past);
+export const peoplelist = weiji.concat(labMembers, collaboratorsAlumni, collaboratorsExternal, past);
 
 // status can be "current", "alumni", "past", "collaborator", "postdoc", "phd", "masters", "undergrad", "rotation", "summer", "highschool"
 // map onto a single role: 
 // "PhD student", "Postdoc", "Masters student", "Undergraduate", "Research Assistant", "Rotation student", "Summer student", "High school student", "Collaborator", "Alumni"
 export const mapStatus = (person) => {
+    if (person.status.includes("pi")) return "Principal Investigator";
     if (person.status.includes("phd")) return "Doctoral Researcher";
     if (person.status.includes("postdoc")) return "Postdoctoral Researcher";
     if (person.status.includes("masters")) return "Masters Student";
@@ -1072,8 +1092,8 @@ export const mapStatus = (person) => {
     if (person.status.includes("rotation")) return "Rotation Student";
     if (person.status.includes("summer")) return "Summer Student";
     if (person.status.includes("highschool")) return "High school Student";
-    if (person.status.includes("collaborator")) return "External Collaborator";
-    return "Unknown";
+    if (person.status.includes("collaborator")) return "Collaborator";
+    return null;
 }
 
 //using peoplelist, get only the current lab members

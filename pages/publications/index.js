@@ -5,6 +5,7 @@ import LinkButton from "../../components/linkbutton";
 import { Button, Row, Col, Input } from "reactstrap";
 import publicationslist from "../../data/publications";
 import ReactMarkdown from "react-markdown";
+import renderDropdownToggle from "../../components/dropdowntoggle";
 
 class Publications extends Component {
   constructor(props) {
@@ -147,42 +148,6 @@ class Publications extends Component {
       </div>
     );
   }
-
-    renderDropdownToggle(label, stateKey, filters) {
-      return (
-        <div>
-          <span
-            className="filter-toggle"
-            onClick={() =>
-              this.setState({ [stateKey]: !this.state[stateKey] })
-            }
-            style={{
-              cursor: "pointer",
-              marginBottom: "10px",
-              display: "inline-block",
-            }}
-          >
-            <span
-              style={{
-                display: "inline-block",
-                transform: this.state[stateKey]
-                  ? "rotate(90deg)"
-                  : "rotate(0deg)",
-                transition: "transform 0.3s",
-              }}
-            >
-              ▶
-            </span>
-            {" "} {label}
-          </span>
-          {this.state[stateKey] && (
-            <div className="filters-dropdown">
-              {this.makebuttons(filters)}
-            </div>
-          )}
-        </div>
-      );
-    }
   
     render() {
       const publicationsByYear = this.state.events.reduce((acc, publication) => {
@@ -197,56 +162,62 @@ class Publications extends Component {
       return (
         <Layout>
           <div className="banner">
-            <h1>
-              <span>Publications</span>
-            </h1>
-            <Input
-              type="text"
-              placeholder="Search by title, authors, or tags"
-              value={this.state.searchQuery}
-              onChange={this.handleSearchChange}
-              style={{ marginBottom: "10px" }}
-            />
-            <div>
-              {this.renderDropdownToggle("Filter by Type", "typeDropdownOpen", [
-                "dissertation",
-                "preprint",
-                "publication",
-              ])}
-              {this.renderDropdownToggle(
-                "Filter by Year",
-                "yearDropdownOpen",
-                this.filters.filter((filter) => !isNaN(filter)).sort().reverse()
-              )}
-              {this.renderDropdownToggle(
-                "Filter by Topic",
-                "topicDropdownOpen",
-                this.filters.filter((filter) => isNaN(filter)).sort()
-              )}
-              <br />
-              <Button onClick={this.reset}>Reset Filters</Button>
-            </div>
-            <div className="publications-list">
-              {Object.keys(publicationsByYear)
-                .sort((a, b) => b - a)
-                .map((year, index) => (
-                  <div key={year} className="year-section">
-                    <h2 className="sticky-year">{year}</h2>
-                    <hr style={{ height: 3 }} />
-                    {publicationsByYear[year].map(this.formatPublication)}
-                  </div>
-                ))}
-            </div>
+        <h1>
+          <span>Publications</span>
+        </h1>
+        <Input
+          type="text"
+          placeholder="Search by title, authors, or tags"
+          value={this.state.searchQuery}
+          onChange={this.handleSearchChange}
+          style={{ marginBottom: "10px" }}
+        />
+        <div>
+          {renderDropdownToggle(
+            "Filter by Type",
+            "typeDropdownOpen",
+            this.makebuttons(["dissertation", "preprint", "publication"]),
+            this.state,
+            this.setState.bind(this)
+          )}
+          {renderDropdownToggle(
+            "Filter by Year",
+            "yearDropdownOpen",
+            this.makebuttons(this.filters.filter((filter) => !isNaN(filter)).sort().reverse()),
+            this.state,
+            this.setState.bind(this)
+          )}
+          {renderDropdownToggle(
+            "Filter by Topic",
+            "topicDropdownOpen",
+            this.makebuttons(this.filters.filter((filter) => isNaN(filter)).sort()),
+            this.state,
+            this.setState.bind(this)
+          )}
+          <br />
+          <Button onClick={this.reset}>Reset Filters</Button>
+        </div>
+        <div className="publications-list">
+          {Object.keys(publicationsByYear)
+            .sort((a, b) => b - a)
+            .map((year, index) => (
+          <div key={year} className="year-section">
+            <h2 className="sticky-year">{year}</h2>
+            <hr style={{ height: 3 }} />
+            {publicationsByYear[year].map(this.formatPublication)}
+          </div>
+            ))}
+        </div>
           </div>
           <style jsx>{`
-            .sticky-year {
-              position: -webkit-sticky;
-              position: sticky;
-              top: 60px; /* Adjust this value based on the height of your menu */
-              background: none;
-              z-index: 1;
-              padding-top: 10px;
-            }
+        .sticky-year {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 60px; /* Adjust this value based on the height of your menu */
+          background: none;
+          z-index: 1;
+          padding-top: 10px;
+        }
           `}</style>
         </Layout>
       );

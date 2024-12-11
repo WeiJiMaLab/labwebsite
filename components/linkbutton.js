@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-function LinkButton({ text, href }) {
+function LinkButton({text, href}) {
     return (
-        <div style={{ margin: "10px 6px 5px 0px", display: "inline-block", whiteSpace: "nowrap" }}>
-            <Link className="button" href={href} target="_blank">
+        <div style={{ margin: "6px 6px 6px 0px", display: "inline-block", whiteSpace: "nowrap" }}>
+            <Link className="button" href={href} target = "_blank">
                 {text}
                 <Image
                     className="externallinkimage"

@@ -1,4 +1,4 @@
-const publicationlist2024 = [
+const papers = [
     {
         authors: ["Jordan Lei", "Wei Ji Ma"],
         title: "Uncertainty affects planning effort, but not plans",
@@ -76,10 +76,7 @@ const publicationlist2024 = [
         ],
         description: null,
         tags: ["review/tutorial", "four-in-a-row"]
-    }
-];
-
-const publicationlist2023 = [
+    },
     {
         authors: ["Zeming Fang", "Ilona Bloem", "Catherine Olsson", "Wei Ji Ma", "Jonathan Winawer"],
         title: "Normalization by orientation-tuned surround in human V1-V3",
@@ -205,10 +202,7 @@ const publicationlist2023 = [
         ],
         description: `Bayesian optimal inference is often heralded as a principled, general framework for human perception. However, optimal inference requires integration over all possible world states, which quickly becomes intractable in complex real-world settings. Additionally, deviations from optimal inference have been observed in human decisions. As a candidate alternative framework to address these issues, we propose point estimate observers, which evaluate only a single best estimate of the world state per response category. We compare the predicted behavior of these model observers to human decisions in five perceptual categorisation tasks. Compared to the Bayesian observer, the point estimate observer loses decisively in one task, ties in two and wins in two tasks. Thus, the point estimate observer is competitive with the Bayesian observer and should be considered in future model development and experimental studies.`,
         tags: ["visual decision-making", "decision rules", "optimality/rationality"]
-    }
-];
-
-const publicationlist2022 = [
+    },
     {
         authors: ["Chancel M", "Ehrsson H", "Ma WJ"],
         title: "Uncertainty-based inference of a common cause for body ownership",
@@ -274,10 +268,7 @@ const publicationlist2022 = [
         ],
         description: null,
         tags: ["planning", "value-based decision-making", "learning", "four-in-a-row"]
-    }
-];
-
-const publicationlist2021 = [
+    },
     {
         authors: ["Lee JL", "Ma WJ"],
         title: "Point-estimating observer models for latent cause detection",
@@ -363,10 +354,7 @@ const publicationlist2021 = [
         ],
         description: `When people view a consumable item for a longer amount of time, they choose it more frequently; this also seems to be the direction of causality. The leading model of this effect is a drift-diffusion model with a fixation-based attentional bias. While this model accounts for the data, it is not normative, in the sense that it does not provide a rationale for this behavioral tendency. Here, we propose a partially normative account for the same data.`,
         tags: ["attention", "inference/uncertainty", "value-based decision-making"]
-    }
-];
-
-const publicationlist2020 = [
+    },
     {
         authors: ["van Opheusden B", "Acerbi L", "Ma WJ"],
         title: "Unbiased and efficient log-likelihood estimation with inverse binomial sampling",
@@ -478,10 +466,7 @@ const publicationlist2020 = [
         ],
         description: null,
         tags: ["inference/uncertainty", "visual decision-making", "neural coding"]
-    }
-];
-
-const publicationlist2019 = [
+    },
     {
         authors: ["Ma WJ"],
         title: "Bayesian decision models: a primer",
@@ -581,10 +566,7 @@ const publicationlist2019 = [
         ],
         description: "The paper from hell! This took Shan and me 7 years from conception to publication, and it was not even her thesis work!! 11 experiments, up to 308 models per experiment (Fig. B12). In the end, 43 pages and a giant negative result, but new methods for model comparison. We set out to detect one of my babies (variable precision) in perception (rather than in visual working memory). But we wanted to do thorough model comparison, in the style of Luigi Acerbi, Ronald van den Berg, Jan Drugowitsch, Valentin Wyart etc. But... the more factors we included (lapses, decision noise, oblique effect), the less evidence remained for 'pure' variable precision (e.g. due to attentional fluctuations). But I'm actually quite happy, as it means that as long you include those factors in your model, you might not need variable precision. Open question: is the situation the same in visual working memory (as suggested by Mike Pratte and Frank Tong in 2017)? Take-home message: think twice before you start working with me!",
         tags: ["visual decision-making", "encoding/representation", "decision rules", "set size effects"]
-    }
-];
-
-const publicationlist2018 = [
+    },
     {
         authors: ["Ma WJ", "Higham JP"],
         title: "The role of familiarity in signaler-receiver interactions",
@@ -719,10 +701,7 @@ const publicationlist2018 = [
         ],
         description: null,
         tags: ["working memory"]
-    }
-];
-
-const publicationlist2017 = [
+    },
     {
         authors: ["Acerbi L", "Ma WJ"],
         title: "Practical Bayesian optimization for model fitting with Bayesian Adaptive Direct Search",
@@ -890,10 +869,7 @@ const publicationlist2017 = [
         ],
         description: null,
         tags: ["methods", "inference/uncertainty"]
-    }
-];
-
-const publicationlist2016 = [
+    },
     {
         authors: ["Van Opheusden B", "Galbiati G", "Bnaya Z", "Ma WJ"],
         title: "Do people think like computers?",
@@ -975,11 +951,7 @@ const publicationlist2016 = [
         ],
         description: null,
         tags: ["visual search", "visual decision-making", "decision rules", "optimality/rationality"]
-    }
-];
-
-
-const publicationlist2015 = [
+    },
     {
         authors: ["Devkar D", "Wright AA", "Ma WJ"],
         title: "The same type of visual working memory limitations in humans and monkeys",
@@ -1072,10 +1044,7 @@ const publicationlist2015 = [
         ],
         description: null,
         tags: ["motivation", "neural coding"]
-    }
-];
-
-const publicationlist2014 = [
+    },
     {
         authors: ["Acerbi L", "Ma WJ", "Vijayakumar S"],
         title: "A framework for testing identifiability of Bayesian models of perception",
@@ -1141,10 +1110,7 @@ const publicationlist2014 = [
         ],
         description: null,
         tags: ["working memory", "encoding/representation", "set size effects"]
-    }
-];
-
-const publicationlist2013 = [
+    },
     {
         authors: ["Qamar AT", "Cotton RJ", "George R", "Beck JM", "Prezhdo E", "Laudano A", "Tolias A", "Ma WJ"],
         title: "Trial-to-trial, uncertainty-based adjustment of decision boundaries in visual categorization",
@@ -1237,10 +1203,7 @@ const publicationlist2013 = [
         ],
         description: null,
         tags: ["multisensory perception", "neural networks/AI", "inference/uncertainty"]
-    }
-];
-
-const publicationlist2012 = [
+    },
     {
         authors: ["Ma WJ"],
         title: "Organizing probabilistic models of perception",
@@ -1367,10 +1330,7 @@ const publicationlist2012 = [
         ],
         description: null,
         tags: ["inference/uncertainty", "optimality/rationality", "perceptual organization", "visual decision-making"]
-    }
-];
-
-const publicationlist2011 = [
+    },
     {
         authors: ["Elmore LC", "Ma WJ", "Magnotti JF", "Leising KJ", "Passaro AD", "Katz JS", "Wright AA"],
         title: "Visual short-term memory compared in rhesus monkeys and humans",
@@ -1418,10 +1378,7 @@ const publicationlist2011 = [
         ],
         description: null,
         tags: ["neural networks/AI", "neural coding", "multisensory perception"]
-    }
-];
-
-const publicationlist2010 = [
+    },
     {
         authors: ["Ma WJ"],
         title: "Signal detection theory, uncertainty, and Poisson-like population codes",
@@ -1434,10 +1391,7 @@ const publicationlist2010 = [
         ],
         description: null,
         tags: ["inference/uncertainty", "neural coding", "review/tutorial"]
-    }
-];
-
-const publicationlist2009 = [
+    },
     {
         authors: ["Ma WJ", "Huang W"],
         title: "No capacity limit in attentional tracking: evidence for probabilistic inference under a resource constraint",
@@ -1505,10 +1459,7 @@ const publicationlist2009 = [
         ],
         description: null,
         tags: ["neural coding", "review/tutorial"]
-    }
-];
-
-const publicationlist2008 = [
+    },
     {
         authors: ["Beck JM", "Ma WJ", "Kiani R", "Hanks TD", "Churchland AK", "Roitman JD", "Shadlen MN", "Latham PE", "Pouget A"],
         title: "Probabilistic Population Codes for Bayesian Decision Making",
@@ -1564,10 +1515,7 @@ const publicationlist2008 = [
         ],
         description: null,
         tags: ["methods", "multisensory perception", "visual decision-making"]
-    }
-];
-
-const publicationlist2007 = [
+    },
     {
         authors: ["Beck JM", "Ma WJ", "Latham PE", "Pouget A"],
         title: "Probabilistic population codes and the exponential family of distributions",
@@ -1596,10 +1544,7 @@ const publicationlist2007 = [
         ],
         description: null,
         tags: ["decision rules", "inference/uncertainty", "multisensory perception", "optimality/rationality"]
-    }
-];
-
-const publicationlist2006 = [
+    },
     {
         authors: ["Ma WJ", "Beck JM", "Latham PE", "Pouget A"],
         title: "Bayesian inference with probabilistic population codes",
@@ -1628,10 +1573,7 @@ const publicationlist2006 = [
         ],
         description: null,
         tags: ["illusions", "neural networks/AI", "time"]
-    }
-];
-
-const publicationlist2005 = [
+    },
     {
         authors: ["Shams L", "Ma WJ", "Beierholm U"],
         title: "Sound-induced flash illusion as an optimal percept",
@@ -1644,10 +1586,7 @@ const publicationlist2005 = [
         ],
         description: null,
         tags: ["inference/uncertainty", "multisensory perception"]
-    }
-];
-
-const publicationlist2004 = [
+    },
     {
         authors: ["Wilken P", "Ma WJ"],
         title: "A detection theory account of change detection",
@@ -1900,33 +1839,8 @@ const dissertationlist = [
     }
 ];
 
-
-var papers = publicationlist2024.concat(publicationlist2023, 
-    publicationlist2022, 
-    publicationlist2021,
-    publicationlist2020,
-    publicationlist2019, 
-    publicationlist2018,
-    publicationlist2017,
-    publicationlist2016,
-    publicationlist2015,
-    publicationlist2014,
-    publicationlist2013, 
-    publicationlist2012, 
-    publicationlist2011, 
-    publicationlist2010,
-    publicationlist2009, 
-    publicationlist2008, 
-    publicationlist2007, 
-    publicationlist2006, 
-    publicationlist2005, 
-    publicationlist2004);
 papers.forEach(paper => paper.tags.push("paper"));
-
-// add tag "preprint" to each preprint
 preprintlist.forEach(preprint => preprint.tags.push("preprint"));
-
-// add tag "dissertation" to each dissertation
 dissertationlist.forEach(dissertation => dissertation.tags.push("dissertation"));
 dissertationlist.forEach(dissertation => dissertation.title = "Dissertation: " + dissertation.title);
 

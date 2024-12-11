@@ -4,11 +4,13 @@ import DropdownMenu from "./dropdownmenu";
 
 export default function Menu() {
   var menuitems = [
-    <Link href="/#about">About</Link>,
-    <Link href="/#research">Research</Link>,
+    <Link href="/">Home</Link>,
     <Link href="/people">People</Link>,
+    <Link href="/research">Research</Link>,
     <Link href="/publications">Publications</Link>,
-    <Link href="/#contact">Contact</Link>,
+    <Link href="/demos">Demos</Link>,
+    <Link href="/#contact">Teaching</Link>,
+    <Link href="/#contact">Community</Link>,
   ];
 
   return (
