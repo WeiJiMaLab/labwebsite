@@ -2,7 +2,6 @@ import Layout from "../../components/layout";
 import React, { Component } from "react";
 import LinkButton from "../../components/linkbutton";
 import renderDropdownToggle from "../../components/dropdowntoggle";
-
 class Demo extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,7 @@ class Demo extends Component {
 
   render() {
     return (
-      <div style = {{paddingBottom: "30px"}}>
+      <div style={{ paddingBottom: "30px" }}>
         {this.props.content}
         <div>
           {renderDropdownToggle(

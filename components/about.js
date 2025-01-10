@@ -9,13 +9,13 @@ export default function About() {
         <div className="frostedCard">
           <p>
             We are the research group of <b>Dr. Wei Ji Ma</b>, based in the{" "}
-            <b>Center for Neural Science</b> and the{" "}
-            <b>Department of Psychology</b> at New York University. Founded in
-            2008 and relocated to NYU in 2013, our lab investigates{" "}
-            <b>human cognition and perception</b> through the frameworks of{" "}
-            <b>computational cognitive science</b> and{" "}
-            <b>computational neuroscience</b>.
+            Center for Neural Science and the Department of Psychology at{" "}
+            <b>New York University</b>. Founded in 2008 and relocated to NYU in
+            2013, our lab investigates human cognition and perception through
+            the frameworks of computational cognitive science and computational
+            neuroscience.
           </p>
+          <br />
           <p>
             Our primary goal is to understand the algorithms and mechanisms the
             brain uses to make decisions with incomplete information. To achieve
@@ -24,18 +24,18 @@ export default function About() {
             populations, train neural networks, and collaborate with experts in
             neurophysiology and neuroimaging.
           </p>
+          <br />
           <p>
             The lab's current research focuses on <b>multi-step planning</b>,{" "}
             <b>approximate inference and resource rationality</b>, and{" "}
             <b>collaborative decision-making</b>. Over the years, we have also
-            contributed to the study of{" "}
-            <b>visual and multisensory perception</b>, <b>working memory</b>,{" "}
-            <b>visual attention</b>, <b>neural coding theories</b>, and{" "}
-            <b>perceptual computation</b>. Other areas of exploration include{" "}
-            <b>experimental validation of these theories</b>,{" "}
-            <b>exploration/exploitation trade-offs</b>, and{" "}
-            <b>social networks</b>.
+            contributed to the study of visual and multisensory perception,
+            working memory, visual attention, neural coding theories, and{" "}
+            perceptual computation Other areas of exploration include{" "}
+            experimental validation of these theories, exploration/exploitation
+            trade-offs, and social networks.
           </p>
+          <br />
           <p>
             Wei Ji recently wrote the book{" "}
             <i>Bayesian Models of Perception and Action: An Introduction</i>,

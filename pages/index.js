@@ -28,10 +28,6 @@ export default function Home({allPostsData}) {
       </Head>
       <Welcome/>
       <About/>
-      {/* <Research/>
-      <Experience/>
-      <Education/>
-      <Contact/> */}
     </Layout>
   );
 }

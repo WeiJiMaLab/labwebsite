@@ -1,3 +1,241 @@
+
+const preprintlist = [
+    {
+        authors: ["Ionatan Kuperwajs", "Mark Ho", "Wei Ji Ma"],
+        title: "Heuristics for meta-planning from a normative model of information search",
+        journal: "PsyArXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "PsyArXiv", url: "https://osf.io/preprints/psyarxiv/qtk9j" },
+            { text: "Twitter thread by Ionatan Kuperwajs", url: "https://twitter.com/Ikuperwajs/status/1773389516209828295" }
+        ],
+        description: `We propose to abstract planning as an information search problem to produce heuristics for meta-planning, or to determine which action to plan for. Specifically, we model a metacognitive process where evaluating candidate actions is viewed as gaining noisy measurements of the value of each action. This statistical estimate is then combined with prior experience in a Bayesian manner to decide whether and in which direction to continue sampling. This Bayesian meta-planner makes intuitive predictions across a range of parameters and acts as a more valuable, informed method for guiding search when compared to best-first and breadth-first search. Additionally, the meta-planner qualitatively accounts for response time trends in a complex planning task.`,
+        tags: ["planning", "inference/uncertainty", "value-based decision-making", "optimality/rationality", "four-in-a-row", "big data"]
+    },
+    {
+        authors: ["Stephan Pohl", "Edgar Y. Walker", "David L. Barack", "Jennifer Lee", "Rachel N. Denison", "Ned Block", "Florent Meyniel", "Wei Ji Ma"],
+        title: "Desiderata of evidence for representation in neuroscience",
+        journal: "arXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "arXiv", url: "https://arxiv.org/abs/2403.14046" },
+            { text: "Twitter thread by David Barack", url: "https://twitter.com/DLBarack/status/1771213054107164720" }
+        ],
+        description: `This paper develops a systematic framework for the evidence neuroscientists use to establish whether a neural response represents a feature. Researchers try to establish that the neural response is (1) sensitive and (2) specific to the feature, (3) invariant to other features, and (4) functional, which means that it is used downstream in the brain. We formalize these desiderata in information-theoretic terms. This formalism allows us to precisely state the desiderata while unifying the different analysis methods used in neuroscience under one framework. We discuss how common methods such as correlational analyses, decoding and encoding models, representational similarity analysis, and tests of statistical dependence are used to evaluate the desiderata. In doing so, we provide a common terminology to researchers that helps to clarify disagreements, to compare and integrate results across studies and research groups, and to identify when evidence might be missing and when evidence for some representational conclusion is strong.`,
+        tags: ["neural coding", "representation", "philosophy"]
+    },
+    {
+        authors: ["Aditi Singh", "Andra Mihali", "Wen-Chuang Chou", "Wei Ji Ma"],
+        title: "A Computational Approach to Search in Visual Working Memory",
+        journal: "PsyArXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "PsyArXiv", url: "https://osf.io/preprints/psyarxiv/jqthb" }
+        ],
+        description: `Search in visual working memory (VWM) is an important process in everyday life, but it has so far not been investigated sufficiently using psychophysical and computational approaches. Here, we examine whether computational process models from the study of VWM and of visual search also apply to search in VWM. Participants performed a two-alternative VWM-based color localization task in which set size and color similarity were varied. We tested models with a resource-limited encoding stage and a Bayesian decision stage. We found that a variable-precision model fit the data well and that adding an item limit did not improve the fit. Next, we took a resource-rational approach, in which mean precision at each set size is set by optimizing a combination between behavioral performance and encoding cost. We found that a resource-rational model with an ad-hoc cost function captures behavior well, but not better than the best non-resource-rational model. Our results, albeit unsurprising, contribute to the evidence that search in VWM is very similar to search in perception.`,
+        tags: ["visual search", "inference/uncertainty", "optimality/rationality", "visual decision-making"]
+    },
+    {
+        authors: ["Ma I", "Phaneuf C", "van Opheusden B", "Ma WJ", "Hartley C"],
+        title: "The component processes of complex planning follow distinct developmental trajectories",
+        journal: "PsyArXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "PsyArXiv", url: "https://psyarxiv.com/d62rw" }
+        ],
+        description: `We use a complex planning task and a computational modeling framework to delineate the developmental trajectories of three component processes of complex planning. Participants (ages 8-25 years) played the Four-in-a-row task, presented as a 4x9 board game, against computer opponents. We found asynchronous age-related change in the component processes of complex planning, with the heuristic evaluation of relevant features rapidly improving from childhood into adolescence, and planning depth showing more protracted developmental improvements. Fewer attentional oversights predicted better planning but did not demonstrate age-related variability. These results provide evidence for the continued development of model-based decision strategies into adulthood, and contribute to a more nuanced understanding of the cognitive mechanisms underpinning planning ability within complex environments at different developmental stages.`,
+        tags: ["planning", "development", "four-in-a-row"]
+    },
+    {
+        authors: ["Long Ni", "Ma WJ"],
+        title: "Disentangling sources of interference in the N-back task",
+        journal: "PsyArXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "PsyArXiv", url: "https://psyarxiv.com/u9gnd/" }
+        ],
+        description: `The N-back task is super common, but exactly at what level the distractor interferes with the target is not known. Interference could happen at a sensory level (signals getting mixed), at the decision stage, or the distractor could get substituted for the target. We take inspiration from the visual crowding literature, which has done a great job in distinguishing sources of interference. We use a 2-back task with orientations instead of letters or numbers. We formulate a model for each level of interference, then compare the models. We cannot distinguish all models but hopefully it is a start.`,
+        tags: ["visual perception", "encoding/representation", "decision rules", "optimality/rationality"]
+    },
+    {
+        authors: ["Andra Mihali", "Ma WJ"],
+        title: "The psychophysics of visual search with heterogeneous distractors",
+        journal: "bioRxiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "bioRxiv", url: "https://www.biorxiv.org/content/10.1101/2020.08.10.244707v3" },
+            { text: "Data and Code (Github)", url: "https://github.com/lianaan/Vis_Search" },
+            { text: "Video of virtual journal club on Nov 18, 2020", url: "https://www.youtube.com/watch?v=_mnriXo5s8w&list=PLmX7T5IuDU4e47pXAbeFwLUOGt7Y3vMio" },
+            { text: "Slides", url: "files/onlinetalks/20201118 Andra Mihali.pdf" }
+        ],
+        description: `One research tradition in visual search has used simple, parametric stimuli and a signal detection theory or Bayesian modeling framework. This tradition has mostly focused on homogeneous distractors, which are not very realistic. In a different tradition, Duncan and Humphreys (1989) conducted a landmark study on visual search with heterogeneous distractors. However, they used complex stimuli, making modeling and dissociation of component processes difficult. Here, we attempt to unify these research traditions by systematically examining visual search with heterogeneous distractors using simple, parametric stimuli and Bayesian modeling.`,
+        tags: ["visual search", "inference/uncertainty", "optimality/rationality", "visual decision-making"]
+    },
+    {
+        authors: ["Ma WJ", "Benjamin Peters"],
+        title: "A neural network walks into a lab: towards using deep nets as models for human behavior",
+        journal: "arXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "arXiv", url: "https://arxiv.org/abs/2005.02181" },
+            { text: "Video of Virtual Journal Club on June 1, 2020", url: "https://www.youtube.com/watch?v=p09oYyj0JZc" }
+        ],
+        description: `What might sound like the beginning of a joke has become an attractive prospect for many cognitive scientists: the use of deep neural network models (DNNs) as models of human behavior in perceptual and cognitive tasks. Although DNNs have taken over machine learning, attempts to use them as models of human behavior are still in the early stages. Can they become a versatile model class in the cognitive scientist's toolbox?`,
+        tags: ["neural networks/AI", "methods"]
+    },
+    {
+        authors: ["Ma WJ"],
+        title: "Problematic usage of the Zhang and Luck mixture model",
+        journal: "bioRxiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "bioRxiv", url: "https://www.biorxiv.org/content/early/2018/02/22/268961" }
+        ],
+        description: null,
+        tags: ["working memory", "methods"]
+    },
+    {
+        authors: ["De Silva N", "Ma WJ"],
+        title: "Optimal allocation of attentional resource to multiple items with unequal relevance",
+        journal: "arXiv",
+        info: null,
+        year: "2023",
+        doi: null,
+        links: [
+            { text: "arXiv", url: "https://arxiv.org/abs/1802.06456" }
+        ],
+        description: null,
+        tags: ["working memory", "optimality/rationality", "attention"]
+    }
+];
+
+const dissertationlist = [
+    {
+        authors: ["Xiang Li"],
+        title: "Temporal processes in perceptual and collaborative decision making",
+        year: "2024",
+        tags: ["value-based decision-making", "individual differences", "social decision-making"],
+        links: [
+            { text: "PDF", url: "files/publications/2024_Xiang_Li_Thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Pei Yuan Zhang"],
+        title: "The dynamic nature of procrastination",
+        year: "2023",
+        tags: ["motivation", "value-based decision-making", "individual differences", "social decision-making"],
+        links: [
+            { text: "PDF", url: "files/publications/2023 Pei Yuan Zhang PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Ionatan Kuperwajs"],
+        title: "Cognitive mechanisms of complex planning",
+        year: "2023",
+        tags: ["planning", "four-in-a-row", "neural networks/AI", "inference/uncertainty", "value-based decision-making", "optimality/rationality", "learning", "big data"],
+        links: [
+            { text: "PDF", url: "files/publications/2023 Ionatan Kuperwajs PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Carolina Di Tella"],
+        title: "On altruism: a behavioral study",
+        year: "2020",
+        tags: ["social decision-making", "value-based decision-making"],
+        links: [
+            { text: "PDF", url: "files/publications/2020 Carolina di Tella PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Aspen Yoo"],
+        title: "The role of uncertainty and priority in visual working memory",
+        year: "2019",
+        tags: ["visual decision-making", "working memory", "decision rules", "confidence", "inference/uncertainty"],
+        links: [
+            { text: "PDF", url: "files/publications/2019 Aspen Yoo PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Sebastiaan van Opheusden"],
+        title: "Complex decision-making",
+        year: "2019",
+        tags: ["decision-making", "planning", "methods", "four-in-a-row"],
+        links: [
+            { text: "PDF", url: "files/publications/2019 Van Opheusden PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Andra Mihali"],
+        title: "Measures and models of covert visual attention in neurotypical function and ADHD",
+        year: "2018",
+        tags: ["visual search", "inference/uncertainty", "visual decision-making", "attention", "methods", "disorders", "optimality/rationality"],
+        links: [
+            { text: "PDF", url: "files/publications/2018 Andra Mihali PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Will Adler"],
+        title: "Computational mechanisms underlying human confidence reports",
+        year: "2018",
+        tags: ["confidence", "decision rules", "inference/uncertainty", "visual decision-making", "attention", "optimality/rationality"],
+        links: [
+            { text: "PDF", url: "files/publications/2018 Will Adler PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Stuart Jackson"],
+        title: "Encoding-decoding models of luminance contrast processing",
+        year: "2016",
+        tags: ["neural coding", "encoding/representation", "visual decision-making", "set size effects"],
+        links: [
+            { text: "PDF", url: "files/publications/2016 Stuart Jackson PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Hongsup Shin"],
+        title: "Measuring and modeling of human visual short-term memory",
+        year: "2015",
+        tags: ["encoding/representation", "visual decision-making", "working memory", "set size effects", "decision rules"],
+        links: [
+            { text: "PDF", url: "files/publications/2015 Hongsup Shin PhD thesis.pdf" }
+        ]
+    },
+    {
+        authors: ["Deepna Devkar"],
+        title: "Change detection in rhesus monkeys and humans",
+        year: "2014",
+        tags: ["encoding/representation", "visual decision-making", "working memory", "set size effects", "decision rules", "inference/uncertainty", "comparative cognition"],
+        links: [
+            { text: "PDF", url: "files/publications/2014 Deepna Devkar PhD thesis_.pdf" }
+        ]
+    },
+    {
+        authors: ["Manisha Bhardwaj"],
+        title: "Visual decision-making in the presence of stimulus and measurement correlations",
+        year: "2013",
+        tags: ["visual decision-making", "encoding/representation", "visual search", "set size effects", "decision rules", "optimality/rationality"],
+        links: [
+            { text: "PDF", url: "files/publications/2013 Manisha Bhardwaj PhD thesis.pdf" }
+        ]
+    }
+];
+
 const papers = [
     {
         authors: ["Jordan Lei", "Wei Ji Ma"],
@@ -1602,248 +1840,10 @@ const papers = [
     }
 ];
 
-const preprintlist = [
-    {
-        authors: ["Ionatan Kuperwajs", "Mark Ho", "Wei Ji Ma"],
-        title: "Heuristics for meta-planning from a normative model of information search",
-        journal: "PsyArXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "PsyArXiv", url: "https://osf.io/preprints/psyarxiv/qtk9j" },
-            { text: "Twitter thread by Ionatan Kuperwajs", url: "https://twitter.com/Ikuperwajs/status/1773389516209828295" }
-        ],
-        description: `We propose to abstract planning as an information search problem to produce heuristics for meta-planning, or to determine which action to plan for. Specifically, we model a metacognitive process where evaluating candidate actions is viewed as gaining noisy measurements of the value of each action. This statistical estimate is then combined with prior experience in a Bayesian manner to decide whether and in which direction to continue sampling. This Bayesian meta-planner makes intuitive predictions across a range of parameters and acts as a more valuable, informed method for guiding search when compared to best-first and breadth-first search. Additionally, the meta-planner qualitatively accounts for response time trends in a complex planning task.`,
-        tags: ["planning", "inference/uncertainty", "value-based decision-making", "optimality/rationality", "four-in-a-row", "big data"]
-    },
-    {
-        authors: ["Stephan Pohl", "Edgar Y. Walker", "David L. Barack", "Jennifer Lee", "Rachel N. Denison", "Ned Block", "Florent Meyniel", "Wei Ji Ma"],
-        title: "Desiderata of evidence for representation in neuroscience",
-        journal: "arXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "arXiv", url: "https://arxiv.org/abs/2403.14046" },
-            { text: "Twitter thread by David Barack", url: "https://twitter.com/DLBarack/status/1771213054107164720" }
-        ],
-        description: `This paper develops a systematic framework for the evidence neuroscientists use to establish whether a neural response represents a feature. Researchers try to establish that the neural response is (1) sensitive and (2) specific to the feature, (3) invariant to other features, and (4) functional, which means that it is used downstream in the brain. We formalize these desiderata in information-theoretic terms. This formalism allows us to precisely state the desiderata while unifying the different analysis methods used in neuroscience under one framework. We discuss how common methods such as correlational analyses, decoding and encoding models, representational similarity analysis, and tests of statistical dependence are used to evaluate the desiderata. In doing so, we provide a common terminology to researchers that helps to clarify disagreements, to compare and integrate results across studies and research groups, and to identify when evidence might be missing and when evidence for some representational conclusion is strong.`,
-        tags: ["neural coding", "representation", "philosophy"]
-    },
-    {
-        authors: ["Aditi Singh", "Andra Mihali", "Wen-Chuang Chou", "Wei Ji Ma"],
-        title: "A Computational Approach to Search in Visual Working Memory",
-        journal: "PsyArXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "PsyArXiv", url: "https://osf.io/preprints/psyarxiv/jqthb" }
-        ],
-        description: `Search in visual working memory (VWM) is an important process in everyday life, but it has so far not been investigated sufficiently using psychophysical and computational approaches. Here, we examine whether computational process models from the study of VWM and of visual search also apply to search in VWM. Participants performed a two-alternative VWM-based color localization task in which set size and color similarity were varied. We tested models with a resource-limited encoding stage and a Bayesian decision stage. We found that a variable-precision model fit the data well and that adding an item limit did not improve the fit. Next, we took a resource-rational approach, in which mean precision at each set size is set by optimizing a combination between behavioral performance and encoding cost. We found that a resource-rational model with an ad-hoc cost function captures behavior well, but not better than the best non-resource-rational model. Our results, albeit unsurprising, contribute to the evidence that search in VWM is very similar to search in perception.`,
-        tags: ["visual search", "inference/uncertainty", "optimality/rationality", "visual decision-making"]
-    },
-    {
-        authors: ["Ma I", "Phaneuf C", "van Opheusden B", "Ma WJ", "Hartley C"],
-        title: "The component processes of complex planning follow distinct developmental trajectories",
-        journal: "PsyArXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "PsyArXiv", url: "https://psyarxiv.com/d62rw" }
-        ],
-        description: `We use a complex planning task and a computational modeling framework to delineate the developmental trajectories of three component processes of complex planning. Participants (ages 8-25 years) played the Four-in-a-row task, presented as a 4x9 board game, against computer opponents. We found asynchronous age-related change in the component processes of complex planning, with the heuristic evaluation of relevant features rapidly improving from childhood into adolescence, and planning depth showing more protracted developmental improvements. Fewer attentional oversights predicted better planning but did not demonstrate age-related variability. These results provide evidence for the continued development of model-based decision strategies into adulthood, and contribute to a more nuanced understanding of the cognitive mechanisms underpinning planning ability within complex environments at different developmental stages.`,
-        tags: ["planning", "development", "four-in-a-row"]
-    },
-    {
-        authors: ["Long Ni", "Ma WJ"],
-        title: "Disentangling sources of interference in the N-back task",
-        journal: "PsyArXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "PsyArXiv", url: "https://psyarxiv.com/u9gnd/" }
-        ],
-        description: `The N-back task is super common, but exactly at what level the distractor interferes with the target is not known. Interference could happen at a sensory level (signals getting mixed), at the decision stage, or the distractor could get substituted for the target. We take inspiration from the visual crowding literature, which has done a great job in distinguishing sources of interference. We use a 2-back task with orientations instead of letters or numbers. We formulate a model for each level of interference, then compare the models. We cannot distinguish all models but hopefully it is a start.`,
-        tags: ["visual perception", "encoding/representation", "decision rules", "optimality/rationality"]
-    },
-    {
-        authors: ["Andra Mihali", "Ma WJ"],
-        title: "The psychophysics of visual search with heterogeneous distractors",
-        journal: "bioRxiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "bioRxiv", url: "https://www.biorxiv.org/content/10.1101/2020.08.10.244707v3" },
-            { text: "Data and Code (Github)", url: "https://github.com/lianaan/Vis_Search" },
-            { text: "Video of virtual journal club on Nov 18, 2020", url: "https://www.youtube.com/watch?v=_mnriXo5s8w&list=PLmX7T5IuDU4e47pXAbeFwLUOGt7Y3vMio" },
-            { text: "Slides", url: "files/onlinetalks/20201118 Andra Mihali.pdf" }
-        ],
-        description: `One research tradition in visual search has used simple, parametric stimuli and a signal detection theory or Bayesian modeling framework. This tradition has mostly focused on homogeneous distractors, which are not very realistic. In a different tradition, Duncan and Humphreys (1989) conducted a landmark study on visual search with heterogeneous distractors. However, they used complex stimuli, making modeling and dissociation of component processes difficult. Here, we attempt to unify these research traditions by systematically examining visual search with heterogeneous distractors using simple, parametric stimuli and Bayesian modeling.`,
-        tags: ["visual search", "inference/uncertainty", "optimality/rationality", "visual decision-making"]
-    },
-    {
-        authors: ["Ma WJ", "Benjamin Peters"],
-        title: "A neural network walks into a lab: towards using deep nets as models for human behavior",
-        journal: "arXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "arXiv", url: "https://arxiv.org/abs/2005.02181" },
-            { text: "Video of Virtual Journal Club on June 1, 2020", url: "https://www.youtube.com/watch?v=p09oYyj0JZc" }
-        ],
-        description: `What might sound like the beginning of a joke has become an attractive prospect for many cognitive scientists: the use of deep neural network models (DNNs) as models of human behavior in perceptual and cognitive tasks. Although DNNs have taken over machine learning, attempts to use them as models of human behavior are still in the early stages. Can they become a versatile model class in the cognitive scientist's toolbox?`,
-        tags: ["neural networks/AI", "methods"]
-    },
-    {
-        authors: ["Ma WJ"],
-        title: "Problematic usage of the Zhang and Luck mixture model",
-        journal: "bioRxiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "bioRxiv", url: "https://www.biorxiv.org/content/early/2018/02/22/268961" }
-        ],
-        description: null,
-        tags: ["working memory", "methods"]
-    },
-    {
-        authors: ["De Silva N", "Ma WJ"],
-        title: "Optimal allocation of attentional resource to multiple items with unequal relevance",
-        journal: "arXiv",
-        info: null,
-        year: "2023",
-        doi: null,
-        links: [
-            { text: "arXiv", url: "https://arxiv.org/abs/1802.06456" }
-        ],
-        description: null,
-        tags: ["working memory", "optimality/rationality", "attention"]
-    }
-];
-
-const dissertationlist = [
-    {
-        authors: ["Xiang Li"],
-        title: "Temporal processes in perceptual and collaborative decision making",
-        year: "2024",
-        tags: ["value-based decision-making", "individual differences", "social decision-making"],
-        links: [
-            { text: "PDF", url: "files/publications/2024_Xiang_Li_Thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Pei Yuan Zhang"],
-        title: "The dynamic nature of procrastination",
-        year: "2023",
-        tags: ["motivation", "value-based decision-making", "individual differences", "social decision-making"],
-        links: [
-            { text: "PDF", url: "files/publications/2023 Pei Yuan Zhang PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Ionatan Kuperwajs"],
-        title: "Cognitive mechanisms of complex planning",
-        year: "2023",
-        tags: ["planning", "four-in-a-row", "neural networks/AI", "inference/uncertainty", "value-based decision-making", "optimality/rationality", "learning", "big data"],
-        links: [
-            { text: "PDF", url: "files/publications/2023 Ionatan Kuperwajs PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Carolina Di Tella"],
-        title: "On altruism: a behavioral study",
-        year: "2020",
-        tags: ["social decision-making", "value-based decision-making"],
-        links: [
-            { text: "PDF", url: "files/publications/2020 Carolina di Tella PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Aspen Yoo"],
-        title: "The role of uncertainty and priority in visual working memory",
-        year: "2019",
-        tags: ["visual decision-making", "working memory", "decision rules", "confidence", "inference/uncertainty"],
-        links: [
-            { text: "PDF", url: "files/publications/2019 Aspen Yoo PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Sebastiaan van Opheusden"],
-        title: "Complex decision-making",
-        year: "2019",
-        tags: ["decision-making", "planning", "methods", "four-in-a-row"],
-        links: [
-            { text: "PDF", url: "files/publications/2019 Van Opheusden PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Andra Mihali"],
-        title: "Measures and models of covert visual attention in neurotypical function and ADHD",
-        year: "2018",
-        tags: ["visual search", "inference/uncertainty", "visual decision-making", "attention", "methods", "disorders", "optimality/rationality"],
-        links: [
-            { text: "PDF", url: "files/publications/2018 Andra Mihali PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Will Adler"],
-        title: "Computational mechanisms underlying human confidence reports",
-        year: "2018",
-        tags: ["confidence", "decision rules", "inference/uncertainty", "visual decision-making", "attention", "optimality/rationality"],
-        links: [
-            { text: "PDF", url: "files/publications/2018 Will Adler PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Stuart Jackson"],
-        title: "Encoding-decoding models of luminance contrast processing",
-        year: "2016",
-        tags: ["neural coding", "encoding/representation", "visual decision-making", "set size effects"],
-        links: [
-            { text: "PDF", url: "files/publications/2016 Stuart Jackson PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Hongsup Shin"],
-        title: "Measuring and modeling of human visual short-term memory",
-        year: "2015",
-        tags: ["encoding/representation", "visual decision-making", "working memory", "set size effects", "decision rules"],
-        links: [
-            { text: "PDF", url: "files/publications/2015 Hongsup Shin PhD thesis.pdf" }
-        ]
-    },
-    {
-        authors: ["Deepna Devkar"],
-        title: "Change detection in rhesus monkeys and humans",
-        year: "2014",
-        tags: ["encoding/representation", "visual decision-making", "working memory", "set size effects", "decision rules", "inference/uncertainty", "comparative cognition"],
-        links: [
-            { text: "PDF", url: "files/publications/2014 Deepna Devkar PhD thesis_.pdf" }
-        ]
-    },
-    {
-        authors: ["Manisha Bhardwaj"],
-        title: "Visual decision-making in the presence of stimulus and measurement correlations",
-        year: "2013",
-        tags: ["visual decision-making", "encoding/representation", "visual search", "set size effects", "decision rules", "optimality/rationality"],
-        links: [
-            { text: "PDF", url: "files/publications/2013 Manisha Bhardwaj PhD thesis.pdf" }
-        ]
-    }
-];
-
 papers.forEach(paper => paper.tags.push("paper"));
 preprintlist.forEach(preprint => preprint.tags.push("preprint"));
 dissertationlist.forEach(dissertation => dissertation.tags.push("dissertation"));
 dissertationlist.forEach(dissertation => dissertation.title = "Dissertation: " + dissertation.title);
-
 
 var publicationlist = papers.concat(preprintlist, dissertationlist);
 publicationlist.sort((a, b) => b.year - a.year);

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Menu from './menu';
 
 const name = 'Blog Name';
-export const siteTitle = 'Wei Ji Ma Lab';
+export const siteTitle = 'Weiji Ma Lab';
 
 export default function Layout({ children, home }) {
   return (

@@ -16,7 +16,7 @@ const ZoomableImage = ({ src, alt }) => (
                             style={{ padding: "50px", minWidth: "100%", height: "auto" }}
                         />
                     </TransformComponent>
-                    <div style={{ position: "absolute", bottom: 10, right: 10, zIndex: 1000, display: "flex", gap: "5px" }}>
+                    <div style={{ position: "absolute", bottom: 10, right: 10, zIndex: 1, display: "flex", gap: "5px" }}>
                         <button
                             onClick={() => zoomIn()}
                             style={{

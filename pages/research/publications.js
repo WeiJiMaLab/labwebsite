@@ -213,7 +213,7 @@ class Publications extends Component {
         .sticky-year {
           position: -webkit-sticky;
           position: sticky;
-          top: 60px; /* Adjust this value based on the height of your menu */
+          top: 0px; /* Adjust this value based on the height of your menu */
           background: none;
           z-index: 1;
           padding-top: 10px;

@@ -915,7 +915,7 @@ class ResearchDirection extends React.Component {
     }
 }
 
-const ResearchPage = () => (
+const Direction = () => (
   <Layout>
     <div className="banner">
       <h1>Research</h1>
@@ -931,4 +931,4 @@ const ResearchPage = () => (
   </Layout>
 );
 
-export default ResearchPage;
+export default Direction;

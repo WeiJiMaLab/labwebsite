@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
+
 html,
 body {
   padding: 0;
@@ -15,13 +18,15 @@ body {
     Helvetica Neue,
     sans-serif;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 18px;
+  background-color: rgba(246, 246, 246, 0.98);
 }
+
 
 :root {
   --color: rgb(50, 50, 50);
   --subtitle: rgb(150, 150, 150);
-  --background-color:  rgba(231, 239, 243, 0.0);
+  --background-color:  rgba(246, 246, 246, 0.98);
 }
 
 * {
@@ -44,14 +49,19 @@ img {
 }
 
 h1{
+  color: rgb(25, 68, 138);
+  font-family: 'DM Serif Text', serif;
+  /* font-family: 'Nova Round', sans-serif; */
   font-size: 50px;
 }
 
 h2{
+  font-family: 'DM Serif Text', serif;
   font-size: 35px;
 }
 
 h3{
+  font-family: 'DM Serif Text', serif;
   font-size: 25px;
 }
 
@@ -66,20 +76,16 @@ p{
   margin-bottom: 0px;
 }
 
-.banner{
-  padding: 100px 20% 3% 20%;
-  min-height: 30vh;
+.banner {
+  background-color: rgb(240, 238, 236);
+  padding: 100px 25% 150px 25%;
+  min-height: 50vh;
+  position: relative;
+  background-image: linear-gradient(rgba(246, 246, 246, 0.98), rgba(235, 235, 235, 0.95)),  url('../public/grain.jpg');
+  /* background-position: fixed; */
+  background-attachment: fixed;
 }
 
-.layer {
-	background-position: top center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 120vh;
-	position: fixed;
-  z-index: -1;
-}
 
 .button{
   font-size: 14px;
@@ -126,6 +132,7 @@ p{
   z-index: 1;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 30px;
 }
 
@@ -137,7 +144,22 @@ p{
   border: 3px solid rgba(0, 0, 0, 0.5) !important; /* Outer border */
 }
 
+.frontpage{
+  background-image: url("../public/background.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left;
+  min-height: 100vh;
+}
+
+
+
+
 @media only screen and (max-width: 768px) {
+
+  .frontpage{
+    background-position: right;
+  }
 
   .layer {
     background-position: top center;

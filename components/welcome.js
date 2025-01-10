@@ -15,16 +15,17 @@ export default function Welcome(){
 
     return (
         <section id="welcome" style={{height: "100vh"}}>
-            <Parallax items={items}>
-            </Parallax>
-            <div className={styles.header}>
-                <h1 className={styles.headerTitle}>
-                    Wei Ji Ma Lab
-                </h1>
-                <h2 className={styles.headerSubtitle}>
-                    The computational study of decision-making
-                </h2>
-            </div>
+            <div className="frontpage"/>
+                <Parallax items={items}>
+                </Parallax>
+                <div className={styles.header}>
+                    <h1 className={styles.headerTitle}>
+                        Weiji Ma Lab
+                    </h1>
+                    <h2 className={styles.headerSubtitle}>
+                        The computational study of decision-making
+                    </h2>
+                </div>
         </section>
     );
 }
