@@ -1,6 +1,6 @@
 
 .menu{
-  font-size: 18px;
+  font-size: 19px;
   margin-left: 4vw;
   margin-top: 3vh;
   padding-left: 4vw;
@@ -13,5 +13,13 @@
 
 .menuitem{
   padding-right: 5vw;
-  color: rgb(25, 68, 138) !important;
+}
+
+.menuitem a{
+  color: var(--color);
+}
+
+.menuitem a:hover{
+  color: var(--secondary-color);
+  text-decoration: none;
 }

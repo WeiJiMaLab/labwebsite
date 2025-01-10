@@ -37,7 +37,7 @@ export default function About() {
           </p>
           <br />
           <p>
-            Wei Ji recently wrote the book{" "}
+            Wei Ji recently wrote the book{" "} 
             <i>Bayesian Models of Perception and Action: An Introduction</i>,
             along with Konrad Kording and Daniel Goldreich.
           </p>

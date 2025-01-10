@@ -86,19 +86,19 @@ export default function People() {
             onChange={handleSearch} 
             style={{ marginBottom: '20px' }}
             />
-            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'white', zIndex: 1000 }}>Lab Members</h2>
+            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'var(--background-color)', zIndex: 1000 }}>Lab Members</h2>
             {filterPeople(currentLabMembers).map((person, index) => formatPeople(person, index))}
             
-            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'white', zIndex: 1000 }}>Alumni Collaborators</h2>
+            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'var(--background-color)', zIndex: 1000 }}>Alumni Collaborators</h2>
             {filterPeople(currentAlumniCollaborators).map((person, index) => formatPeople(person, index))}
             
-            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'white', zIndex: 1000 }}>External Collaborators</h2>
+            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'var(--background-color)', zIndex: 1000 }}>External Collaborators</h2>
             {filterPeople(currentExternalCollaborators).map((person, index) => formatPeople(person, index))}
             
-            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'white', zIndex: 1000 }}>Past Lab Members</h2>
+            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'var(--background-color)', zIndex: 1000 }}>Past Lab Members</h2>
             {filterPeople(pastLabMembers).map((person, index) => formatPeople(person, index))}
             
-            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'white', zIndex: 1000 }}>Past Collaborators</h2>
+            <h2 style={{ position: 'sticky', top: '0px', backgroundColor: 'var(--background-color)', zIndex: 1000 }}>Past Collaborators</h2>
             {filterPeople(pastCollaborators).map((person, index) => formatPeople(person, index))}
         </div>
         </section>
