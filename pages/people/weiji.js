@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 const WeijiPage = () => {
   return (
     <Layout>
-      <div className="banner">
+      <div className="banner" style={{paddingTop: "60px"}}>
         <div className="container">
 
           <div className="frostedCard">

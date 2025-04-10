@@ -577,7 +577,7 @@ function BayesianMicrosaccadeDetection() {
 export default function Demos() {
   return (
     <Layout>
-      <div className="banner">
+      <div className="banner" style={{paddingTop: "60px"}}>
         <h1>Demos</h1>
         <BADS />
         <IBS />

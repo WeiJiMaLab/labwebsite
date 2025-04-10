@@ -917,7 +917,7 @@ class ResearchDirection extends React.Component {
 
 const Direction = () => (
   <Layout>
-    <div className="banner">
+    <div className="banner" style={{paddingTop: "60px"}}>
       <h1>Research</h1>
       <ResearchIntro />
       <ResearchPlanning />

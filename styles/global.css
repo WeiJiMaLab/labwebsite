@@ -19,14 +19,14 @@ body {
     sans-serif;
   line-height: 1.6;
   background-color: rgba(246, 246, 246, 0.98);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
 
 :root {
   --color: rgb(25, 68, 138);
   --secondary-color: rgb(67, 138, 236);
   --subtitle: rgb(150, 150, 150);
-  --background-color:  rgb(245, 246, 249);
+  --background-color: rgb(245, 246, 249);
 }
 
 * {
@@ -47,63 +47,105 @@ img {
   display: inline !important;
 }
 
-h1{
+h1 {
   color: var(--color);
   font-family: 'DM Serif Text', serif;
-  /* font-family: 'Nova Round', sans-serif; */
   font-size: 50px;
 }
 
-h2{
+h2 {
   font-family: 'DM Serif Text', serif;
   font-size: 35px;
 }
 
-h3{
+h3 {
   font-family: 'DM Serif Text', serif;
   font-size: 25px;
 }
 
-h4{
+h4 {
   font-size: 22px;
   color: var(--subtitle);
   font-weight: 400;
 }
 
-p{
+p {
   font-size: 16px;
-  margin-bottom: 0px;
+  margin-bottom: 1rem; /* Add some spacing between paragraphs */
 }
 
 .banner {
   background-color: var(--background-color);
-  padding: 100px 25% 2% 25%;
+  padding: 2rem;
   min-height: 50vh;
   position: relative;
   background-attachment: fixed;
   color: var(--color);
+  width: 100%;
+  padding: 100px 25% 0% 25%;
+  overflow-x: hidden;
 }
 
-a{
-  color: var(--secondary-color);
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.button{
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col-md-4, .col-md-5, .col-md-6, .col-md-8 {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.frostedCard {
+  border-radius: 25px;
+  z-index: 1;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.button {
   font-size: 14px;
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(12, 109, 207, 0.05);
   border-radius: 10px;
   border-width: 2.5px;
   border-style: solid;
-  padding: 5px;
+  padding: 0 1rem;
   color: var(--color);
+  display: inline-block;
+  margin: 0;
 }
 
-.button:hover{
+.button:hover {
   transition: background-color 0.3s, color 0.3s;
   background-color: rgba(167, 216, 255, 0.413);
   color: var(--secondary-color);
   text-decoration: none;
+}
+
+.bio-section {
+  margin-bottom: 2rem;
+}
+
+.bio-section h3 {
+  margin-bottom: 1rem;
+  color: var(--color);
+}
+
+.bio-section p {
+  margin-bottom: 1rem;
 }
 
 .externallinkimage{
@@ -128,15 +170,6 @@ a{
   display: block;
 }
 
-.frostedCard{
-  border-radius: 25px;
-  z-index: 1;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 30px;
-}
-
 .defaultImage{
   height: auto;
 }
@@ -151,85 +184,114 @@ a{
   background-attachment: fixed;
   background-position: left;
   min-height: 100vh;
+  background-color: var(--background-color); /* Fallback color */
 }
 
+.mobileonly {
+  display: none !important;
+}
 
-
+.desktoponly {
+  display: flex !important;
+}
 
 @media only screen and (max-width: 768px) {
-
-  .frontpage{
-    background-position: right;
+  .banner {
+    padding: 4rem; /* overridden by 480px settings */
+    min-height: auto;
   }
 
-  .layer {
-    background-position: top center;
-    margin-top: 0vh;
-    height: 100vh;
-    width: 200vw;
+  .frostedCard {
+    padding: 0.75rem; /* overridden by 480px settings */
+    margin-bottom: 1rem;
+    border-radius: 15px;
   }
 
-  .screen{
-    opacity: 0.4;
+  h1 {
+    font-size: 1.75rem; /* overridden by 480px settings */
+    text-align: center;
   }
 
-  .wlayer1{
-    margin-left: -81vw;
-  }
-  .wlayer2{
-    margin-left: -80vw;
-  }
-  .wlayer3{
-    margin-left: -79vw;
+  h2 {
+    font-size: 1.5rem; /* overridden by 480px settings */
+    text-align: center;
   }
 
-  h1{
-    font-size: 30px;
-  }
-  
-  h2{
-    font-size: 25px;
-  }
-  
-  h3{
-    font-size: 20px;
-  }
-  
-  h4{
-    font-size: 16px;
-  }
-  
-  p{
-    font-size: 14px;
+  h3 {
+    font-size: 1.25rem; /* overridden by 480px settings */
   }
 
-  body{
-    font-size: 14px;
+  h4 {
+    font-size: 1.25rem; /* remains unchanged */
   }
 
-  .externallinkimage{
+  p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  li{
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 100%; /* overridden by 480px settings */
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem !important; /* remains unchanged */
+    padding: 0 0.5rem; /* remains unchanged */
+    margin: 0;
+  }
+
+  .col-md-4, .col-md-5, .col-md-6, .col-md-8 {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .bio-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .frontpage {
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll; /* Remove fixed attachment on mobile */
+  }
+
+  .container {
+    padding: 0 0.25rem; /* overridden by 480px settings */
+  }
+
+  .row {
+    margin: 0 -0.5rem;
+  }
+
+  .externallinkimage {
     width: 12px;
     height: 12px;
-    margin-top: -5px;
   }
 
-  .banner{
-    padding: 100px 5% 3% 5%;
-    min-height: 30vh;
+  .mobileonly {
+    display: block !important;
   }
 
-  #education .frostedCard{
-    text-align: center;
+  .desktoponly {
+    display: none !important;
   }
-
-  #experience .frostedCard{
-    text-align: center;
-  }
-
-  #experience ul{
-    text-align : left;
-  }
-
   
-
+  .col-md-4 {
+    width: 33.333333%;
+  }
+  
+  .col-md-5 {
+    width: 41.666667%;
+  }
+  
+  .col-md-6 {
+    width: 50%;
+  }
+  
+  .col-md-8 {
+    width: 66.666667%;
+  }
 }

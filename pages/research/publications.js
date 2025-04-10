@@ -111,40 +111,42 @@ class Publications extends Component {
 
   formatPublication(publication, index) {
     return (
-      <div
-        key={index}
-        className="publication-item"
-        style={{ marginLeft: "150px" }}
-      >
-        <h3>{publication.title}</h3>
-        <p style={{ margin: "0" }}>
-          {publication.authors.join(", ")}, {publication.year}
-          <br />
-          {publication.journal && <em>{publication.journal}</em>}
-          {publication.info ? ", " + publication.info : ""}
-          {publication.doi && (
-            <>
-              , DOI:{" "}
-              <a href={`https://doi.org/${publication.doi}`}>
-                {publication.doi}
-              </a>
-            </>
-          )}
-        </p>
-        {publication.links.map((link, linkIndex) => (
-          <LinkButton key={linkIndex} text={link.text} href={link.url} />
-        ))}
-        <div className="publication-description">
-          <ReactMarkdown>{publication.description}</ReactMarkdown>
+      <div className="publication-item-container">
+        <div
+          key={index}
+          className="publication-item"
+          style={{ marginLeft: "150px" }}
+        >
+          <h3>{publication.title}</h3>
+          <p style={{ margin: "0" }}>
+            {publication.authors.join(", ")}, {publication.year}
+            <br />
+            {publication.journal && <em>{publication.journal}</em>}
+            {publication.info ? ", " + publication.info : ""}
+            {publication.doi && (
+              <>
+                , DOI:{" "}
+                <a href={`https://doi.org/${publication.doi}`}>
+                  {publication.doi}
+                </a>
+              </>
+            )}
+          </p>
+          {publication.links.map((link, linkIndex) => (
+            <LinkButton key={linkIndex} text={link.text} href={link.url} />
+          ))}
+          <div className="publication-description">
+            <ReactMarkdown>{publication.description}</ReactMarkdown>
+          </div>
+          <p className="publication-tags">
+            <b>Tags:</b>{" "}
+            {publication.tags
+              .filter((filter) => isNaN(filter))
+              .sort()
+              .join(", ")}
+          </p>
+          <hr />
         </div>
-        <p className="publication-tags">
-          <b>Tags:</b>{" "}
-          {publication.tags
-            .filter((filter) => isNaN(filter))
-            .sort()
-            .join(", ")}
-        </p>
-        <hr />
       </div>
     );
   }
@@ -162,7 +164,7 @@ class Publications extends Component {
       return (
         <Layout>
           <div className="banner">
-        <h1>
+        <h1 style={{paddingTop: "60px"}}>
           <span>Publications</span>
         </h1>
         <Input

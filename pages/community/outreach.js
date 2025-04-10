@@ -265,7 +265,7 @@ const GrowingUpInScience = () => (
 const Outreach = () => {
   return (
     <Layout>
-      <div className="banner">
+      <div className="banner" style={{paddingTop: "60px"}}>
         <h1>Community</h1>
         <GrowingUpInScience/>
         <DiversityEquityInclusionJustice/>

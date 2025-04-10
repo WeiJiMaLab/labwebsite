@@ -300,7 +300,7 @@ const ProfessionalDevelopment = () => (
 const LabLife = () => {
   return (
     <Layout>
-      <div className="banner">
+      <div className="banner" style={{paddingTop: "60px"}}>
         <h1>Lab Life</h1>
         <LabCultureAndExpectations />
         <br />
